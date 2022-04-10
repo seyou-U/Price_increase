@@ -11,3 +11,45 @@
   padding: 20px;
   margin: 0 auto;
 }
+
+.top-title h1{
+  font-size: 200px;
+  font-family: cursive;
+  transform: rotate(-3deg);
+  padding-top: 20px;
+}
+
+.top-title p{
+  font-size: 40px;
+  padding-top: 100px;
+  font-weight: bold;
+  float: right;
+}
+
+.introduction-container{
+  max-width: 80%;
+  padding: 40px;
+  margin: 0 auto;
+  border: 1px solid #000;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+.introduction-container h2{
+  text-align: left;
+  font-size: 45px;
+  font-weight: bold;
+  border-bottom: 2px solid #000;
+  padding-bottom: 30px;
+}
+
+.introduction-container p{
+  margin: 0;
+  font-weight: bold;
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+
+.introduction-period{
+  padding-top: 40px;
+}
