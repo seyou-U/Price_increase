@@ -8,10 +8,123 @@ body{
   padding-bottom: 180px;
   box-sizing: border-box;
   min-height: 100vh;
-  background-color: #fff;
+  background-color: #eed13f;
   line-height: 18px;
 }
 
 body::-webkit-scrollbar {
   display:none;
+}
+
+.header{
+  width: 100%;
+  height: 75px;
+  padding: 4px 25px;
+  background-color: #000;
+}
+
+//ヘッダー部分
+.logo-title{
+  float: left;
+  color: yellow;
+}
+
+.nav-item{
+  float: right;
+}
+
+.nav-link{
+  display: inline-block;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+//フッター部分
+.footer{
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  height: 100px;
+  padding-top: 40px;
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+}
+
+.footer p{
+  margin-top: 0px;
+  font-size: 15px;
+}
+
+//アラートメッセージ
+.notifications{
+  color: #fff;
+  text-align: center;
+}
+
+.notice{
+  background-color: #4a90e2;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0.75rem 1.25rem;
+}
+
+.alert{
+  background-color: red;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+//ログインボタン
+.login-btn{
+  display: inline-block;
+  background-color: #4a90e2;
+  color: #fff;
+  border: 1px solid #6c757d;
+  border-radius: 5px;
+  padding: 8px;
+  margin-top: 12px;
+  margin-right: 10px;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+//登録ボタン
+.new-user-btn{
+  display: inline-block;
+  background-color: #f0821e;
+  color: #fff;
+  border: 1px solid #6c757d;
+  border-radius: 5px;
+  padding: 8px;
+  margin-top: 12px;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+//ユーザ編集ボタン
+.user-edit{
+  display: inline-block;
+  color: yellow;
+  font-weight: bold;
+  padding: 8px;
+  margin-right: 15px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+//ログアウトボタン
+.logout-btn{
+  display: inline-block;
+  background-color: #6c757d;
+  border: 1px solid #6c757d;
+  border-radius: 5px;
+  color: #fff;
+  padding: 8px;
+  margin-top: 12px;
+  line-height: 1.5;
+  text-decoration: none;
 }

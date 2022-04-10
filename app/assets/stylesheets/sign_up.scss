@@ -10,16 +10,16 @@
   max-width: 600px;
   padding: 40px;
   margin: 0 auto;
-  border: 2px solid #000;
   border-radius: 3px;
+  background-color: #fff;
 }
 
-.sign-up-area{
+.sign-area{
   max-width: 75%;
   margin: 0 auto;
 }
 
-.sign-up-area p{
+.sign-area p{
   text-align: center;
   padding-bottom: 20px;
   font-weight: bold;
@@ -27,7 +27,7 @@
   border-bottom: 1px solid #000
 }
 
-.sign-up-text{
+.sign-text{
     display: block;
     width: 100%;
     height: calc(1.5em + 0.75rem + 2px);
@@ -51,6 +51,6 @@
 }
 
 .login_attention{
-    color: #000;
+    color: #009bc6;
     text-decoration: none;
 }
