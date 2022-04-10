@@ -37,8 +37,8 @@
 }
 
 .new-account{
-  color: #000;
-  background-color: #ced4da;
+  color: #fff;
+  background-color: #f0821e;
   margin-bottom: 20px;
 }
 
@@ -55,6 +55,7 @@
   text-decoration: none;
 }
 
+///新規登録失敗時のメッセージ
 #error_explanation{
   width: 450px;
   padding: 0 7px;
@@ -74,4 +75,9 @@
 #error_explanation ul{
   margin-top: 0;
   font-size: 14px;
+}
+
+//パスワード再設定画面
+.remake-password{
+  margin-bottom: 20px;
 }
