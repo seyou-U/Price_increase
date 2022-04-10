@@ -54,3 +54,24 @@
   color: #009bc6;
   text-decoration: none;
 }
+
+#error_explanation{
+  width: 450px;
+  padding: 0 7px;
+  margin-bottom: 20px;
+}
+
+#error_explanation h2{
+  color: red;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: left;
+  padding: 5px 0 5px 15px;
+  margin: 0 -7px;
+  line-height: 1.2;
+}
+
+#error_explanation ul{
+  margin-top: 0;
+  font-size: 14px;
+}
