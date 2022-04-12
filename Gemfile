@@ -22,7 +22,7 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'carrierwave'
-
+gem 'rmagick'
 gem 'devise'
 gem 'devise-i18n'
 # Use Active Storage variant
