@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  resources :products, only: [:index, :show]
   devise_for :users
   root 'home#index'
-
+  get 'products/index'
+  get 'products/show'
   devise_scope :user do
     get '/users', to: 'devise/registrations#new'
   end
