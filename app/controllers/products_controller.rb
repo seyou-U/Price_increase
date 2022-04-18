@@ -5,6 +5,7 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @product = Product.find(params[:id])
   end
 
   def search
@@ -14,7 +15,7 @@ class ProductsController < ApplicationController
     else
       @products = Product.all
       @count = @products.count
-      redirect_to products_index_path(@product, @count)
+      redirect_to products_path(@product, @count)
     end
   end
 end
