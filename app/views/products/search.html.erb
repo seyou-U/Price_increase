@@ -14,7 +14,13 @@
 
   <div class="up-products">
     <% @products.each do |product| %>
-      <div class="search-products">
+      <% if @count == 1 %>
+        <div class="search-product">
+      <% elsif @count == 2%>
+        <div class="search-products-two">
+      <% else %>
+        <div class="search-products">
+      <% end %>
         <div class="search-inner">
           <%= link_to root_path,class: "search-link" do %>
             <div class="search-image">

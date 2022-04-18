@@ -37,7 +37,7 @@
     margin: 0;
     font-size: 15px;
     font-weight: 400;
-    color: grey;
+    color: #000;
     background-color: #fff;
     border: 2px solid #000;
   }
@@ -58,6 +58,17 @@
 }
 
 .search-product{
+    flex: 0 100%;
+    max-width: 100%;
+    padding: 0 25px;
+    margin: 0 80px;
+}
+
+.search-products-two{
+    margin-right: 30px;
+}
+
+.search-products{
     flex: 0 33%;
     max-width: 33%;
     padding: 0 15px;
