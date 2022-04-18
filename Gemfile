@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'carrierwave'
 gem 'rmagick'
+gem 'ransack'
 gem 'devise'
 gem 'devise-i18n'
 # Use Active Storage variant
