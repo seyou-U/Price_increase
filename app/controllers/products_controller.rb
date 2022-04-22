@@ -18,4 +18,11 @@ class ProductsController < ApplicationController
       redirect_to products_path(@product, @count)
     end
   end
+
+  def keisan
+  end
+
+  def product_keisan
+    @product = Product.find(params[:format])
+  end
 end

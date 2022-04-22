@@ -1,0 +1,15 @@
+<div class="product-calculation">
+  <div class="product-calculation-container">
+    <div class="calculation-nav">
+      <h1>損失チェック</h1>
+      <p>ここでは値上げした金額が1年間でどれくらい家計に影響を与えるか計算し、シュミレーションすることができます。</p>
+    </div>
+    <div class="calculation-main">
+      <div class="calculation-product">
+        <h3>チェックする商品について</h3>
+        <%= image_tag @product.image.url, class: "product-calculation-image" %>
+     <%= @product.high_price %>
+       <%= react_component("HelloWorld", { greeting: "Hello from react-rails." }) %>
+    </div>
+  </div>
+</div>
