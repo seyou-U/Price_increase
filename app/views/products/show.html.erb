@@ -1,2 +1,21 @@
-<h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
+<div class="product-show">
+  <div class="product-show-container">
+    <div class="product-left">
+        <% if @product.image? %>
+          <%= image_tag @product.image.url, class: "product-show-image" %>
+        <% else %>
+          <%= image_tag "no_image.jpeg", class: "product-show-image" %>
+        <% end %>
+        <p class="product-quote">引用 : "<%= @product.quote %>"より</p>
+    </div>
+    <div class="product-right">
+      <div class="product-right-container">
+        <p>気になる</p>
+        <p class="product-show-name"><%= @product.name %></p>
+        <p class="product-show-price"><span><%= @product.high_price %>円</span>の値上げ</p>
+        <p class="product-show-explanation"><%= @product.explanation %></p>
+        <%= link_to "この商品で損失チェックする", root_path, class: "loss-btn" %>
+      </div>
+    </div>
+  </div>
+</div>
