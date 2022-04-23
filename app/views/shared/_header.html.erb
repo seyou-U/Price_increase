@@ -6,7 +6,7 @@
 
     <div class="nav-item">
       <%= link_to "値上げ商品", products_path, class: "nav-link" %>
-      <%= link_to "損失チェック", keisan_path(order_sort: 1), class: "nav-link" %>
+      <%= link_to "損失チェック", keisan_path, class: "nav-link" %>
       <%= link_to "値上げ予想", root_path, class: "nav-link" %>
       <% if user_signed_in? %>
         <%= link_to current_user.username,root_path, class: "user-edit" %>
