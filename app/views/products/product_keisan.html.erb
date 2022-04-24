@@ -8,8 +8,10 @@
       <div class="calculation-product">
         <h3>チェックする商品について</h3>
         <%= image_tag @product.image.url, class: "product-calculation-image" %>
-     <%= @product.high_price %>
-       <%= react_component("HelloWorld", { greeting: "Hello from react-rails." }) %>
+        <p class="product-calculation-name"><%= @product.name %></p>
+        <p class="product-calculation-price"><%= @product.high_price %></p>
+        <div id="root"></div>
+      <%= react_component("Keisan", {price: @product.high_price}) %>
     </div>
   </div>
 </div>
