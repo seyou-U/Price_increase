@@ -18,7 +18,7 @@ class Product extends React.Component {
 
   render () {
     const newValue1 = this.state.value1
-    const result = this.props.price * parseInt(newValue1) //* 1年間の週の数
+    const result = this.props.price * parseInt(newValue1) * 52
     const onClickCal = () => {
       if(!isNaN(result)){
         this.setState({answer: result});
