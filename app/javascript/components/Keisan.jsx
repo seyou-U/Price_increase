@@ -21,21 +21,25 @@ class Product extends React.Component {
     const result = this.props.price * parseInt(newValue1) * 52
     const onClickCal = () => {
       if(!isNaN(result)){
-        this.setState({answer: result});
+        this.setState({answer: `1年間の損失金額は${result}円`});
       }else{
         this.setState({answer: "数字以外の文字が入力されています"});
       };
+    };
+
+    const resultStyle = {
+      color: "red"
     };
 
     return (
       <>
         {this.props.price}
         <p>×</p>
-        <NumericalValue  value={newValue1} valueChange={this.changeValue1} />
+        <NumericalValue  value={newValue1} valueChange={this.changeValue1}/>
         <button onClick={onClickCal}>
           計算する
         </button>
-        <p>{this.state.answer}</p>
+        <p style={resultStyle}>{this.state.answer}</p>
       </>
     );
   };
@@ -53,7 +57,10 @@ class  NumericalValue extends React.Component {
 
   render () {
     const newValue = this.props.value
-    return <input type="text" value={newValue} onChange={this.handleChange} />
+    const wake = {
+      width: "100px"
+    };
+    return <input type="text" value={newValue} onChange={this.handleChange} style={wake}/>
   }
 }
 
