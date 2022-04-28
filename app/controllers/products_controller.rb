@@ -20,6 +20,7 @@ class ProductsController < ApplicationController
   end
 
   def keisan
+    @products = Product.all
   end
 
   def product_keisan
