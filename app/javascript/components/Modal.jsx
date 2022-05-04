@@ -1,6 +1,7 @@
-import React from "react"
+import React from "react";
 import Modal from 'react-modal';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+// import { Link } from 'react-router-dom';
 
 const customStyles = {
   content : {
@@ -8,12 +9,15 @@ const customStyles = {
     left                  : '50%',
     right                 : 'auto',
     bottom                : 'auto',
-    height                : 'auto',
-    width                : 'auto',
-    marginRight           : '-50%',
+    height                : '100vh',
+    width                : '80%',
     transform             : 'translate(-50%, -50%)',
     overFlow             : 'scroll'
   }
+};
+
+const productListStyles = {
+    padding             : '5px'
 };
 
 class SelectModal extends React.Component {
@@ -44,8 +48,8 @@ class SelectModal extends React.Component {
           onRequestClose={this.closeModal}
           style={customStyles}
           contentLabel="Modal">
-          <h2>Hello</h2>
-          <ProductList products={this.props.products} />
+          <ProductList
+            products={this.props.products} />
           <button onClick={this.closeModal}>閉じる</button>
         </Modal>
       </>
@@ -53,25 +57,27 @@ class SelectModal extends React.Component {
   }
 }
 
-const ProductList = (props) => {
-  return(
-    <>
-      {props.products.map((product) =>
-      <ProductItem product={product} key={product.id} /> )}
-    </>
-  )
+function ProductList(props) {
+    return (
+        <>
+            {props.products.map((product) => <ProductItem product={product} key={product.id} />)}
+        </>
+    );
 }
 
 ProductList.propTypes = {
     products: PropTypes.array.isRequired
 }
 
-const ProductItem = (props) => {
-    const {name} = props.product
+
+function ProductItem(props) {
+    const { name } = props.product;
     return (
-        <div>{name}</div>
-    )
-  }
+        <>
+            <div style={productListStyles}>{name}</div>
+        </>
+    );
+}
 
   ProductItem.propTypes = {
     product: PropTypes.object.isRequired

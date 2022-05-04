@@ -23,6 +23,10 @@ class ProductsController < ApplicationController
     @products = Product.all
   end
 
+  def keisan_select
+    # @product = Product.find(params[:id])
+  end
+
   def product_keisan
     @product = Product.find(params[:format])
   end
