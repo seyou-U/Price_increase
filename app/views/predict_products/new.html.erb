@@ -1,2 +1,43 @@
-<h1>PredictProducts#new</h1>
-<p>Find me in app/views/predict_products/new.html.erb</p>
+<div class="product-from">
+  <div class="product-from-container">
+    <h1>値上げ予想投稿ページ</h1>
+    <div class="predict-product-information">
+      <div class="predict-product-information">
+        <%= form_for @predict_product do |f| %>
+          <div class="product-field">
+            <div class="product-field-label">
+              <%= f.label :商品名, class: "product-form-title"%>
+              <p class = "absolutely">必須</p><br/>
+            </div>
+            <%= f.text_field :name, placeholder: "例) ○○食品", class: "product-form" %>
+          </div>
+          <div class="product-field">
+            <div class="product-field-label">
+              <%= f.label :説明, class: "product-form-title" %>
+              <p class = "absolutely">必須</p><br/>
+            </div>
+            <%= f.text_area :explanation, placeholder: "例) ○○年の○○月ごろから値上げすると予想", class: "product-form" %>
+          </div>
+          <div class="product-field">
+            <div class="product-field-label">
+              <%= f.label :理由, class: "product-form-title"%>
+              <p class = "absolutely">必須</p><br/>
+            </div>
+            <%= f.text_area :reason, placeholder: "例) ○○だと思ったため", class: "product-form" %>
+          </div>
+          <div class="product-field">
+            <div class="product-field-label">
+              <%= f.label :商品画像, class: "product-form-title"%>
+            </div>
+            <%= f.file_field :image, class: "product-form" %>
+          </div>
+          <div class="product-field">
+            <div class="product-field-label">
+              <%= f.submit "投稿",class: "new-product-btn" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
