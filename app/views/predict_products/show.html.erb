@@ -1,2 +1,19 @@
-<h1>PredictProducts#show</h1>
-<p>Find me in app/views/predict_products/show.html.erb</p>
+<div class="product-show">
+  <div class="product-show-container">
+    <div class="product-left">
+      <% if  @predict_product.image? %>
+        <%= image_tag @predict_product.image.url, class: "predict-product-image" %>
+      <% else %>
+        <%= image_tag "no_image.jpeg", class: "predict-product-image" %>
+      <% end %>
+      <p class="product-show-name">投稿者: <%= @user.username %></p>
+    </div>
+    <div class="product-right">
+      <div class="product-right-container">
+        <p class="product-show-name"><%= @predict_product.name %></p>
+        <p class="product-show-explanation"><%= @predict_product.explanation %></p>
+        <p class="product-show-explanation"><%= @predict_product.reason %></p>
+      </div>
+    </div>
+  </div>
+</div>
