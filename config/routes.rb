@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'keisan_select',to: 'products#keisan_select'
   get 'product_keisan',to: 'products#product_keisan'
   resources :products, only: [:index, :show]
+  resources :predict_products, only: [:index, :show, :new]
   devise_scope :user do
     get '/users', to: 'devise/registrations#new'
   end
