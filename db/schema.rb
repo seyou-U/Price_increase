@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2022_05_07_015514) do
     t.string "name"
     t.text "explanation"
     t.text "reason"
-    t.integer "image"
+    t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

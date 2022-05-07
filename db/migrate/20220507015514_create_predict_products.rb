@@ -5,7 +5,7 @@ class CreatePredictProducts < ActiveRecord::Migration[6.1]
       t.string :name
       t.text :explanation
       t.text :reason
-      t.integer :image
+      t.string :image
 
       t.timestamps
     end
