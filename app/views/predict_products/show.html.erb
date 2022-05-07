@@ -6,14 +6,22 @@
       <% else %>
         <%= image_tag "no_image.jpeg", class: "predict-product-image" %>
       <% end %>
-      <p class="product-show-name">投稿者: <%= @user.username %></p>
+      <p class="product-up-user">(予想したユーザー)</p>
+      <p class="up-user"><%= @user.username %></p>
     </div>
     <div class="product-right">
       <div class="product-right-container">
-        <p class="product-show-name"><%= @predict_product.name %></p>
-        <p class="product-show-explanation"><%= @predict_product.explanation %></p>
-        <p class="product-show-explanation"><%= @predict_product.reason %></p>
+        <p class="predict-box-name"><%= @predict_product.name %></p>
+        <p class="predict-box-title">○ 説明</p>
+        <p class="predict-box-content"><%= @predict_product.explanation %></p>
+        <p class="predict-box-title">○ 理由</p>
+        <p class="predict-box-content"><%= @predict_product.reason %></p>
       </div>
     </div>
+  </div>
+</div>
+<div class="predict-comment">
+  <div class="predict-comment">
+    <p>この値上げ予想に対するコメント</p>
   </div>
 </div>

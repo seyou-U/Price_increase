@@ -1,3 +1,114 @@
-// Place all the styles related to the predict_products controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+//値上げ予想商品投稿ページ
+.product-from{
+    width: 65%;
+    margin: 0 auto;
+}
+
+.product-from h1{
+    padding: 25px 0 15px 30px;
+}
+
+.predict-product-information{
+    max-width: 900px;
+    padding: 40px;
+    margin: 0 auto;
+    border-radius: 3px;
+    background-color: #fff;
+}
+
+.product-field-label{
+    display: flex;
+    font-weight: bold;
+    padding-right: 15px;
+    font-size: 22px;
+}
+
+.absolutely{
+    padding: 1px 3px;
+    margin: 0 0 5px 3px;
+    height: 20px;
+    width: 32px;
+    color: #fff;
+    background-color: #ff4500;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.any{
+    background-color: #1e90ff;
+}
+
+.product-form{
+    border: 1.5px solid #696969;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    border-radius: 3px;
+    width: 300px;
+}
+
+.product-text{
+    border: 1.5px solid #696969;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    resize: none;
+    height: 100px;
+    width: 800px;
+}
+
+.product-file{
+    margin-top: 10px;
+    margin-bottom: 70px;
+}
+
+.new-product-btn{
+    margin: 0px;
+    padding: 10px;
+    width: 160px;
+    text-align: center;
+    color:#fff;
+    background: #3cb371;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+//値上げ予想商品の詳細ページ
+.predict-product-image{
+    width: 80%;
+    object-fit: cover;
+}
+
+.product-up-user{
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+.up-user{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.predict-box-name{
+    font-weight: bold;
+    font-size: 35px;
+    padding: 20px 0;
+    border-bottom: 2px solid #000;
+    margin-top: -30px;
+}
+
+.predict-box-title{
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'ヒラギノ明朝 ProN';
+    margin-bottom: 0px;
+}
+
+.predict-box-content{
+    padding-top: 10px;
+    font-size: 16px;
+    overflow-wrap: break-word;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
