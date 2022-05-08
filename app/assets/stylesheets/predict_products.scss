@@ -19,6 +19,7 @@
 .product-field-label{
     display: flex;
     font-weight: bold;
+    padding-top: 20px;
     padding-right: 15px;
     font-size: 22px;
 }
@@ -34,6 +35,14 @@
     border-radius: 5px;
 }
 
+.attn{
+    padding: 0px;
+    margin: 0px;
+    color: #696969;
+    font-size: 15px;
+    padding: 3px;
+}
+
 .any{
     background-color: #1e90ff;
 }
@@ -41,19 +50,22 @@
 .product-form{
     border: 1.5px solid #696969;
     padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 30px;
+    margin: 5px;
     border-radius: 3px;
-    width: 300px;
+    width: 70%;
 }
 
 .product-text{
     border: 1.5px solid #696969;
-    margin-top: 5px;
-    margin-bottom: 30px;
+    margin: 5px;
     resize: none;
     height: 100px;
-    width: 800px;
+    width: 95%;
+}
+
+div.field_with_errors {
+    background-color: #ff4500;
+    padding: 1px;
 }
 
 .product-file{
@@ -111,4 +123,24 @@
     margin-top: 0px;
     margin-bottom: 30px;
     line-height: 1.7;
+}
+
+//投稿時のバリデーションメッセージ
+.error-form{
+    width: 65%;
+    margin: 0 auto;
+}
+
+.error-form-box{
+    background-color: #dcdcdc;
+    border: 3px solid #ff4500;
+    border-radius: 5px;
+    color: #dc143c;
+    margin-top: 20px;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.error-count{
+    font-size: 25px;
 }

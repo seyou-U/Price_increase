@@ -1,0 +1,10 @@
+<% if @predict_product.errors.any? %>
+  <div class="error-form">
+    <div class="error-form-box">
+      <p class="error-count"><%= @predict_product.errors.count %>件の問題が発生しました</p>
+      <% @predict_product.errors.full_messages.each do |message| %>
+        <p class="error-msg">• <%= message %></p>
+      <% end %>
+    </div>
+  </div>
+<% end %>
