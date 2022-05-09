@@ -1,7 +1,6 @@
 import React from "react";
 import Modal from 'react-modal';
 import PropTypes from 'prop-types';
-// import { Link } from 'react-router-dom';
 
 const customStyles = {
   content : {
@@ -71,16 +70,20 @@ ProductList.propTypes = {
 
 
 function ProductItem(props) {
+    const { id } = props.product;
     const { name } = props.product;
+    const idStr = JSON.stringify(id)
     return (
         <>
+            <div style={productListStyles}>{id}</div>
             <div style={productListStyles}>{name}</div>
+            <a href={"/products/"+idStr+"/product_keisan?id="+idStr}>この商品を選択</a>
         </>
     );
 }
 
   ProductItem.propTypes = {
-    product: PropTypes.object.isRequired
+    product: PropTypes.string
   }
 
 export default SelectModal
