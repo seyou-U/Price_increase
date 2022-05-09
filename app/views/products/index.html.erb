@@ -5,7 +5,7 @@
       <p>ジャンルで検索する</p>
     </div>
     <div class="search">
-      <%= form_tag("/search",:method => "get") do %>
+      <%= form_tag("/products/search",:method => "get") do %>
         <%= text_field_tag :search,params[:search],class: "search-form",placeholder: "気になる商品名を入力" %>
         <%= submit_tag "検索",class: "search-btn" %>
       <% end %>

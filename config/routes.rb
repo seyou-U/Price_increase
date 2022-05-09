@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
   root 'home#index'
-  get 'search',to: 'products#search'
   resources :products, only: [:index, :show] do
     member  do
       get 'product_keisan'
     end
     collection do
       get 'keisan'
+      get 'search'
     end
   end
   resources :predict_products

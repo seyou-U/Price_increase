@@ -5,13 +5,12 @@
       <p>ジャンルで検索する</p>
     </div>
     <div class="search">
-      <%= form_tag("/search",:method => "get") do %>
+      <%= form_tag("/products/search",:method => "get") do %>
         <%= text_field_tag :search,params[:search],class: "search-form",placeholder: "気になる商品名を入力" %>
         <%= submit_tag "検索",class: "search-btn" %>
       <% end %>
     </div>
   </div>
-
   <div class="up-products">
     <% @products.each do |product| %>
       <% if @count == 1 %>
@@ -22,7 +21,7 @@
         <div class="search-products">
       <% end %>
         <div class="search-inner">
-          <%= link_to root_path,class: "search-link" do %>
+          <%= link_to product_path(product),class: "search-link" do %>
             <div class="search-image">
               <%= image_tag product.image.url,class: "search-product-image" %>
             </div>
