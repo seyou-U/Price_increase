@@ -5,10 +5,10 @@
     <% end %>
 
     <div class="nav-item">
-      <%= link_to "値上げ商品", products_path, class: "nav-link" %>
-      <%= link_to "損失チェック", keisan_products_path, class: "nav-link" %>
-      <%= link_to "値上げ予想", predict_products_path, class: "nav-link" %>
       <% if user_signed_in? %>
+        <%= link_to "値上げ商品", products_path, class: "nav-link" %>
+        <%= link_to "損失チェック", keisan_products_path, class: "nav-link" %>
+        <%= link_to "値上げ予想", predict_products_path, class: "nav-link" %>
         <%= link_to current_user.username,root_path, class: "user-edit" %>
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout-btn" %>
       <% else %>
