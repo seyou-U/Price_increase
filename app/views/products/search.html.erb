@@ -1,16 +1,6 @@
 <div class="search-result">
   <h4>値上げ商品 : <%= @count %>件</h4>
-  <div class="searchers">
-    <div class="tag-search">
-      <p>ジャンルで検索する</p>
-    </div>
-    <div class="search">
-      <%= form_tag("/products/search",:method => "get") do %>
-        <%= text_field_tag :search,params[:search],class: "search-form",placeholder: "気になる商品名を入力" %>
-        <%= submit_tag "検索",class: "search-btn" %>
-      <% end %>
-    </div>
-  </div>
+  <%= render "shared/search_product" %>
   <div class="up-products">
     <% @products.each do |product| %>
       <% if @count == 1 %>

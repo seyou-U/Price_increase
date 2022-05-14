@@ -1,0 +1,16 @@
+<div class="searchers">
+  <div class="search">
+    <%= form_tag("/products/search",:method => "get") do %>
+      <div class="search-select">
+        <p>キーワードから探す</p>
+        <%= text_field_tag :search, params[:search], class: "search-form", placeholder: "気になる商品名を入力" %>
+      </div>
+      <div class="cross">×</div>
+      <div class="search-select">
+        <p>ジャンルから探す</p>
+        <%= select_tag :name, options_from_collection_for_select(Genre.all, :name, :name), {include_blank:"ジャンルを選択してください"} %>
+      </div>
+      <%= submit_tag "検索", class: "search-btn" %>
+    <% end %>
+  </div>
+</div>

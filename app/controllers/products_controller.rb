@@ -9,14 +9,23 @@ class ProductsController < ApplicationController
   end
 
   def search
-    if  params[:search].present?
-      @products = Product.where('name LIKE(?)',"%#{params[:search]}%")
-      @count = @products.count
+    if  params[:search].present? && params[:name].present?
+      product_name_ids = Product.where('name LIKE(?)',"%#{params[:search]}%").pluck(:id)
+      genre_name_ids = Genre.where("name= ?", params[:name]).pluck(:id)
+      @products =  Product.where("id IN (?) and genre_id IN (?)", product_name_ids, genre_name_ids)
+    elsif params[:search].present? && params[:name].blank?
+      product_name_ids = Product.where('name LIKE(?)',"%#{params[:search]}%").pluck(:id)
+      genre_name_ids = Genre.all.pluck(:id)
+      @products =  Product.where("id IN (?) and genre_id IN (?)", product_name_ids, genre_name_ids)
+    elsif params[:search].blank? && params[:name].present?
+      product_name_ids = Product.all.pluck(:id)
+      genre_name_ids = Genre.where("name= ?", params[:name]).pluck(:id)
+      @products =  Product.where("id IN (?) and genre_id IN (?)", product_name_ids, genre_name_ids)
     else
       @products = Product.all
-      @count = @products.count
       redirect_to products_path(@product, @count)
     end
+    @count = @products.count
   end
 
   def keisan
