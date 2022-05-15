@@ -1,23 +1,7 @@
 import React from "react";
 import Modal from 'react-modal';
 import PropTypes from 'prop-types';
-
-const customStyles = {
-  content : {
-    top                   : '50%',
-    left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    height                : '100vh',
-    width                : '80%',
-    transform             : 'translate(-50%, -50%)',
-    overFlow             : 'scroll'
-  }
-};
-
-const productListStyles = {
-    padding             : '5px'
-};
+import '../stylesheets/modal.scss';
 
 class SelectModal extends React.Component {
   constructor() {
@@ -41,15 +25,18 @@ class SelectModal extends React.Component {
   render() {
     return (
       <>
-        <button onClick={this.openModal}>商品を選択</button>
+        <button class="selectButton" onClick={this.openModal}>商品を選択してください</button>
         <Modal
           isOpen={this.state.modalIsOpen}
           onRequestClose={this.closeModal}
-          style={customStyles}
-          contentLabel="Modal">
+          contentLabel="Modal"
+          class="modal">
           <ProductList
             products={this.props.products} />
-          <button onClick={this.closeModal}>閉じる</button>
+          <div class="modalButton">
+            <a href="/" id="homePath">HOME画面へ</a>
+            <button class="closeButton" onClick={this.closeModal}>閉じる</button>
+          </div>
         </Modal>
       </>
     );
@@ -68,22 +55,24 @@ ProductList.propTypes = {
     products: PropTypes.array.isRequired
 }
 
-
 function ProductItem(props) {
     const { id } = props.product;
     const { name } = props.product;
     const idStr = JSON.stringify(id)
     return (
         <>
-            <div style={productListStyles}>{id}</div>
-            <div style={productListStyles}>{name}</div>
-            <a href={"/products/"+idStr+"/product_keisan?id="+idStr}>この商品を選択</a>
+          <div class="productList">
+            <div class="productContainer">
+              <div class="productName">{name}</div>
+              <a href={"/products/"+idStr+"/product_keisan?id="+idStr} id="selectProduct">この商品を選択</a>
+            </div>
+          </div>
         </>
     );
 }
 
-  ProductItem.propTypes = {
-    product: PropTypes.string
-  }
+ProductItem.propTypes = {
+  product: PropTypes.string
+}
 
 export default SelectModal
