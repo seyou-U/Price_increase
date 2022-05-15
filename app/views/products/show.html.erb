@@ -10,11 +10,12 @@
     </div>
     <div class="product-right">
       <div class="product-right-container">
-        <p>気になる</p>
         <% if @product.already_favorited?(current_user) %>
-          <%= link_to 'いいねを外す', product_favorites_path(@product.id), method: :delete %>
+          <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+          <%= link_to 'お気に入りから外す', product_favorites_path(@product.id), method: :delete, class: "like-link" %>
         <% else %>
-          <%= link_to 'いいね', product_favorites_path(@product.id), method: :post %>
+          <i class="fa fa-star-o fa-lg" aria-hidden="true"></i>
+          <%= link_to 'お気に入りに追加', product_favorites_path(@product.id), method: :post, class: "like-link" %>
         <% end %>
         <p class="product-show-name"><%= @product.name %></p>
         <p class="product-show-price"><span><%= @product.high_price %>円</span>の値上げ</p>
