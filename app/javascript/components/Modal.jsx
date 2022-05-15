@@ -46,7 +46,7 @@ class SelectModal extends React.Component {
 function ProductList(props) {
     return (
         <>
-            {props.products.map((product) => <ProductItem product={product} key={product.id} />)}
+          {props.products.map((product) => <ProductItem product={product} key={product.id} />)}
         </>
     );
 }
@@ -60,14 +60,14 @@ function ProductItem(props) {
     const { name } = props.product;
     const idStr = JSON.stringify(id)
     return (
-        <>
-          <div class="productList">
-            <div class="productContainer">
-              <div class="productName">{name}</div>
-              <a href={"/products/"+idStr+"/product_keisan?id="+idStr} id="selectProduct">この商品を選択</a>
-            </div>
+      <>
+        <div class="productList">
+          <div class="productContainer">
+            <div class="productName">{name}</div>
+            <a href={"/products/"+idStr+"/product_keisan?id="+idStr} id="selectProduct">この商品を選択</a>
           </div>
-        </>
+        </div>
+      </>
     );
 }
 
