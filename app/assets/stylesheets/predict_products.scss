@@ -180,19 +180,6 @@ div.field_with_errors {
     width: 100%;
 }
 
-//検索商品が1件のみの場合
-.post-product{
-    width: 700px;
-    padding: 0 25px;
-}
-
-//検索結果が2件のみの場合
-.post-products-two{
-    width: 600px;
-    margin-right: 30px;
-}
-
-//検索結果が3件以上の場合
 .post-products{
     padding: 0 15px;
     flex: 0 25%;
