@@ -15,6 +15,7 @@ class PredictProductsController < ApplicationController
   end
 
   def index
+    @predict_products = PredictProduct.all
   end
 
   def show

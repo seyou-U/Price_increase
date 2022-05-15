@@ -1,2 +1,25 @@
-<h1>PredictProducts#index</h1>
-<p>Find me in app/views/predict_products/index.html.erb</p>
+<div class="expected-list">
+  <h1>値上げ予想一覧ページ</h1>
+  <%= link_to "予想投稿ページはこちら", new_predict_product_path, class: "post-link" %>
+  <div class="up-products">
+    <% @predict_products.each do |predict_product| %>
+      <div class="post-products">
+        <div class="predict-inner">
+          <%= link_to predict_product_path(predict_product),class: "search-link" do %>
+            <div class="predict-image">
+              <% if predict_product.image? %>
+                <%= image_tag predict_product.image.url,class: "predict-image" %>
+              <% else %>
+                <%= image_tag "no_image.jpeg", class: "predict-image" %>
+              <% end %>
+            </div>
+            <div class="product-detailed">
+              <p class="product-detailed-name"><%= predict_product.name %></p>
+            </div>
+            <button>商品詳細</button>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
