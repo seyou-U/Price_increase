@@ -1,0 +1,24 @@
+<div class="expected-list">
+  <h1 class="page-title">★ お気に入り商品一覧 ★</h1>
+  <div class="up-products">
+    <% if @favorite_list.present? %>
+      <% @favorite_list.each do |product| %>
+        <div class="search-products">
+          <div class="search-inner">
+            <%= link_to product_path(product),class: "search-link" do %>
+              <div class="search-image">
+                <%= image_tag product.image.url,class: "search-product-image" %>
+              </div>
+              <div class="product-detailed">
+                <p class="product-detailed-name"><%= product.name %></p>
+                <p class="product-detailed-price"><span><%= product.high_price %>円</span>の値上げ</p>
+              </div>
+              <button>商品詳細</button>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  <%= react_component("ReturnTopButton") %>
+</div>
