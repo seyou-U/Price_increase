@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import '../stylesheets/keisan.scss';
 
@@ -31,9 +31,9 @@ class Product extends React.Component {
     return (
       <>
         <NumericalValue  value={newValue1} valueChange={this.changeValue1}/>
-        <div class="result">
-          <button class="checkButton" onClick={onClickCal}>チェックしてみる</button>
-          <p class="resultData">{this.state.answer}</p>
+        <div className="result">
+          <button className="checkButton" onClick={onClickCal}>チェックしてみる</button>
+          <p className="resultData">{this.state.answer}</p>
         </div>
       </>
     );
@@ -54,10 +54,10 @@ class  NumericalValue extends React.Component {
     const newValue = this.props.value
     return(
       <>
-        <div class="productCalculation">
-          <div class="textSide">1週間に</div>
+        <div className="productCalculation">
+          <div className="textSide">1週間に</div>
           <input id="Text" type="text" value={newValue} onChange={this.handleChange}/>
-          <div class="textSide">回購入(使用)する</div>
+          <div className="textSide">回購入(使用)する</div>
         </div>
       </>
     )
