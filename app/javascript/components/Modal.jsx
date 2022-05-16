@@ -25,7 +25,7 @@ class SelectModal extends React.Component {
   render() {
     return (
       <>
-        <button class="selectButton" onClick={this.openModal}>商品を選択してください</button>
+        <button className="selectButton" onClick={this.openModal}>商品を選択してください</button>
         <Modal
           isOpen={this.state.modalIsOpen}
           onRequestClose={this.closeModal}
@@ -33,9 +33,9 @@ class SelectModal extends React.Component {
           class="modal">
           <ProductList
             products={this.props.products} />
-          <div class="modalButton">
+          <div className="modalButton">
             <a href="/" id="homePath">HOME画面へ</a>
-            <button class="closeButton" onClick={this.closeModal}>閉じる</button>
+            <button className="closeButton" onClick={this.closeModal}>閉じる</button>
           </div>
         </Modal>
       </>
@@ -56,19 +56,19 @@ ProductList.propTypes = {
 }
 
 function ProductItem(props) {
-    const { id } = props.product;
-    const { name } = props.product;
-    const idStr = JSON.stringify(id)
-    return (
-      <>
-        <div class="productList">
-          <div class="productContainer">
-            <div class="productName">{name}</div>
-            <a href={"/products/"+idStr+"/product_keisan?id="+idStr} id="selectProduct">この商品を選択</a>
-          </div>
+  const { id } = props.product;
+  const { name } = props.product;
+  const idStr = JSON.stringify(id)
+  return (
+    <>
+      <div className="productList">
+        <div className="productContainer">
+          <div className="productName">{name}</div>
+          <a href={"/products/"+idStr+"/product_keisan?id="+idStr} id="selectProduct">この商品を選択</a>
         </div>
-      </>
-    );
+      </div>
+    </>
+  );
 }
 
 ProductItem.propTypes = {
