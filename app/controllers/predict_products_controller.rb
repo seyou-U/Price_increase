@@ -1,5 +1,5 @@
 class PredictProductsController < ApplicationController
-
+  before_action :authenticate_user!
   def new
     @predict_product = PredictProduct.new
   end
