@@ -1,0 +1,83 @@
+.commonality-box{
+  padding: 60px 15px 0 15px;
+  font-size: 16px;
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.commonality-container{
+  max-width: 600px;
+  padding: 40px;
+  margin: 0 auto;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+.sign-area{
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+.sign-area p{
+  text-align: center;
+  padding-bottom: 20px;
+  font-weight: bold;
+  font-size: 35px;
+  border-bottom: 1px solid #000
+}
+
+.sign-text{
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.5rem;
+  margin-bottom: 18px;
+  border-radius: 3px;
+}
+
+.new-account{
+  color: #fff;
+  background-color: #f0821e;
+  margin-bottom: 20px;
+}
+
+.btn{
+  cursor: pointer;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+}
+
+.login_attention{
+  color: #009bc6;
+  text-decoration: none;
+}
+
+///新規登録失敗時のメッセージ
+#error_explanation{
+  width: 450px;
+  padding: 0 7px;
+  margin-bottom: 20px;
+}
+
+#error_explanation h2{
+  color: red;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: left;
+  padding: 5px 0 5px 15px;
+  margin: 0 -7px;
+  line-height: 1.2;
+}
+
+#error_explanation ul{
+  margin-top: 0;
+  font-size: 14px;
+}
+
+//パスワード再設定画面
+.remake-password{
+  margin-bottom: 20px;
+}
