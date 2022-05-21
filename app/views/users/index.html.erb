@@ -1,2 +1,35 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<div class = "account-page">
+  <div class = "account-page-container">
+    <div class = "account-title">
+      <h1>アカウント情報</h1>
+    </div>
+    <div class = "account-information">
+      <div class="user-image">
+        <% if current_user.user_image? %>
+          <%= image_tag current_user.user_image.url, class: "user-icon" %>
+        <% else %>
+          <%= image_tag "initial.jpeg", class: "user-icon" %>
+        <% end %>
+      </div>
+      <div class = "user-content">
+        <div class = "row">
+            <label class = "user-label">名前 :</label>
+            <div class = "user-title">
+            <%= @user.username %>
+            </div>
+        </div>
+      </div>
+      <div class = "user-content">
+        <div class = "row">
+            <label class = "user-label">メールアドレス :</label>
+            <div class = "user-title">
+            <%= @user.email %>
+            </div>
+        </div>
+      </div>
+      <div class = "row">
+        <%= link_to "編集", edit_user_registration_path(@current_user), class: "edit-btn" %>
+      </div>
+    </div>
+  </div>
+</div>

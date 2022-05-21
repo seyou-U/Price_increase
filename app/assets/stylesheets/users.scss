@@ -7,3 +7,62 @@
     font-weight: bold;
     border: 5px solid #fff;
 }
+
+//アカウントの情報ページ
+.account-page-container{
+    margin: 30px auto;
+    padding: 20px 30px;
+    background-color: #fff;
+    border: 2px solid #808080;
+    border-radius: 3px;
+    max-width: 900px;
+}
+
+.account-title{
+    padding: 20px 50px 0px 15px;
+    margin-left: 20px;
+    border-bottom: 2px solid #d3d3d3;
+    float: left;
+}
+
+.account-information{
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+.user-icon{
+    border-radius: 50%;
+    width: 280px;
+    height: 280px;
+    margin-bottom: 40px;
+}
+
+.user-content{
+    border-bottom: 1px solid #eaedef;
+    padding: 20px;
+    margin: 50px 100px;
+    font-size: 20px;
+}
+
+.row{
+    display: flex;
+    margin: 0 -15px;
+    flex-wrap: wrap;
+}
+
+.user-title{
+    margin: 0 0 0 auto;
+    font-weight: bold;
+}
+
+.edit-btn{
+    background-color: #ff6347;
+    color: #fff;
+    margin: 0 auto;
+    padding: 15px 50px;
+    border: 1px solid #ff4500;
+    font-size: 18px;
+    border-radius: 4px;
+    text-decoration: none;
+}
