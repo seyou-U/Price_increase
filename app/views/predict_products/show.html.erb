@@ -23,5 +23,14 @@
 <div class="predict-comment">
   <div class="predict-comment">
     <p>この値上げ予想に対するコメント</p>
+    <%= form_with(model:[@predict_product, @comment], method: :post) do |f| %>
+      <%= f.text_area :comment_content, class: "product-text" %>
+      <%= f.hidden_field :predict_product_id, value: @predict_product.id %>
+      <%= f.submit "コメントする",class: "new-product-btn" %>
+    <% end %>
+    <p>コメント一覧</p>
+    <% @comments.each do |comment| %>
+      <%= comment.comment_content %>
+    <% end %>
   </div>
 </div>

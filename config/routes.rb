@@ -11,7 +11,9 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
-  resources :predict_products
+  resources :predict_products do
+    resources :comments, only: [:create]
+  end
   resources :users, only: [:index, :edit]
   get '/users/favorite',to: 'users#show'
 end

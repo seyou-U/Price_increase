@@ -21,6 +21,8 @@ class PredictProductsController < ApplicationController
   def show
     @predict_product = PredictProduct.find(params[:id])
     @user = @predict_product.user
+    @comments = @predict_product.comments
+    @comment = current_user.comments.new
   end
 
   private
