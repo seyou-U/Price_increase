@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2022_05_21_044912) do
 
   create_table "comments", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "comment_content"
+    t.text "comment_content"
     t.bigint "user_id", null: false
     t.bigint "predict_product_id", null: false
     t.datetime "created_at", precision: 6, null: false
