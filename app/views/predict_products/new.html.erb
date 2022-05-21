@@ -1,0 +1,49 @@
+<%= render "shared/error_form" %>
+<div class="product-from">
+  <div class="product-from-container">
+    <h1>値上げ商品予想投稿ページ</h1>
+    <div class="predict-product-information">
+      <%= form_for @predict_product do |f| %>
+        <div class="product-field">
+          <div class="product-field-label">
+            <%= f.label :商品名, class: "product-form-title"%>
+            <p class = "absolutely">必須</p><br/>
+          </div>
+          <p class = "attn">2文字以上30文字以内</p>
+          <%= f.text_field :name, placeholder: "例) ○○食品", class: "product-form" %>
+        </div>
+        <div class="product-field">
+          <div class="product-field-label">
+            <%= f.label :説明, class: "product-form-title" %>
+            <p class = "absolutely">必須</p><br/>
+          </div>
+          <p class = "attn">2文字以上750文字以内</p>
+          <%= f.text_area :explanation, placeholder: "例) ○○年の○○月ごろから値上げすると予想", class: "product-text" %>
+        </div>
+        <div class="product-field">
+          <div class="product-field-label">
+            <%= f.label :理由, class: "product-form-title"%>
+            <p class = "absolutely">必須</p><br/>
+          </div>
+          <p class = "attn">2文字以上750文字以内</p>
+          <%= f.text_area :reason, placeholder: "例) ○○だと思ったため", class: "product-text" %>
+        </div>
+        <div class="product-field">
+          <div class="product-field-label">
+            <%= f.label :商品画像, class: "product-form-title"%>
+            <p class = "absolutely any">任意</p><br/>
+          </div>
+          <%= f.file_field :image, class: "product-file" %>
+        </div>
+        <div class="product-field">
+          <div class="product-field-label">
+            <%= f.submit "投稿",class: "new-product-btn" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<% if @predict_product.errors.any? %>
+  <%= javascript_pack_tag 'predict_products_render' %>
+<% end %>

@@ -1,0 +1,14 @@
+<div class="product-calculation">
+  <div class="product-calculation-container">
+    <div class="calculation-nav">
+      <h1>損失チェック</h1>
+      <p>このページでは値上げした金額が1年間でどれくらい家計に影響を与えるか計算し、シュミレーションすることができます。</p>
+    </div>
+    <div class="calculation-main">
+      <div class="calculation-product">
+        <h3>チェックする商品について下のボタンから選択してください</h3>
+        <%= react_component("Modal", {products: @products}) %>
+      </div>
+    </div>
+  </div>
+</div>

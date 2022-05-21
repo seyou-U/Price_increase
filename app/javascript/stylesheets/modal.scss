@@ -1,0 +1,82 @@
+.modal{
+    margin: 50%;
+    height: 100vh;
+    width: 80vh;
+    transform: translate(-50%, -50%);
+    overFlow: scroll;
+}
+
+.selectButton{
+    width: 500px;
+    display: block;
+    margin: 50px auto;
+    padding: 20px 0px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 3px;
+    border-color: #ff0000;
+    background-color: #ff0000;
+    color: #fff;
+    cursor: pointer;
+}
+
+//モーダルの中身
+.productList{
+    width: 100%;
+}
+
+.productContainer{
+    border: 2px solid #808080;
+    background-color: #f8f8ff;
+    border-radius: 3px;
+    width: 45%;
+    margin: 10px 30px;
+    padding: 20px 10px;
+    text-align: center;
+    display: flex;
+    float: left;
+}
+
+.productName{
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+#selectProduct{
+    text-decoration: none;
+    border: 2px solid #4169e1;
+    background-color: #4169e1;
+    color: #fff;
+    border-radius: 2px;
+    padding: 10px 5px;
+    margin: 0 0 0 auto;
+    cursor: pointer;
+}
+
+.modalButton{
+    font-size: 20px;
+    margin-top: 20px;
+    float: right;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#homePath{
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #008000;
+    background-color: #008000;
+    padding: 15px;
+    margin-right: 20px;
+}
+
+.closeButton{
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 40px;
+    background-color: #ff0000;
+    border-color: #ff0000;
+    font-size: 20px;
+    cursor: pointer;
+}

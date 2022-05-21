@@ -8,25 +8,24 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'sign_in', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'sign_up', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'home', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'products', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'predict_products', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'users', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <%= render "shared/header" %>
-
     <div class = "notifications">
       <% if flash[:notice] %>
         <p class = "notice"><%= flash[:notice] %></p>
       <% end %>
-
       <% if flash[:alert] %>
         <p class = "alert"><%= flash[:alert] %></p>
       <% end %>
     </div>
-
     <%= yield %>
-
     <footer class="footer">
       <p>© 2022 Copylight. Neagaridus</p>
     </footer>

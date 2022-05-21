@@ -1,0 +1,188 @@
+//値上げ予想商品投稿ページ
+.product-from{
+    width: 65%;
+    margin: 0 auto;
+}
+
+.product-from h1{
+    padding: 25px 0 15px 30px;
+}
+
+.predict-product-information{
+    max-width: 900px;
+    padding: 40px;
+    margin: 0 auto;
+    border-radius: 3px;
+    background-color: #fff;
+}
+
+.product-field-label{
+    display: flex;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-right: 15px;
+    font-size: 22px;
+}
+
+.absolutely{
+    padding: 1px 3px;
+    margin: 0 0 5px 3px;
+    height: 20px;
+    width: 32px;
+    color: #fff;
+    background-color: #ff4500;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.attn{
+    padding: 0px;
+    margin: 0px;
+    color: #696969;
+    font-size: 15px;
+    padding: 3px;
+}
+
+.any{
+    background-color: #1e90ff;
+}
+
+.product-form{
+    border: 1.5px solid #696969;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 3px;
+    width: 70%;
+}
+
+.product-text{
+    border: 1.5px solid #696969;
+    margin: 5px;
+    resize: none;
+    height: 100px;
+    width: 95%;
+}
+
+div.field_with_errors {
+    background-color: #ff4500;
+    padding: 1px;
+}
+
+.product-file{
+    margin-top: 10px;
+    margin-bottom: 70px;
+}
+
+.new-product-btn{
+    margin: 0px;
+    padding: 10px;
+    width: 160px;
+    text-align: center;
+    color:#fff;
+    background: #3cb371;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+//値上げ予想商品の詳細ページ
+.predict-product-image{
+    width: 80%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-up-user{
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+.up-user{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.predict-box-name{
+    font-weight: bold;
+    font-size: 35px;
+    padding: 20px 0;
+    border-bottom: 2px solid #000;
+    margin-top: -30px;
+}
+
+.predict-box-title{
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'ヒラギノ明朝 ProN';
+    margin-bottom: 0px;
+}
+
+.predict-box-content{
+    padding-top: 10px;
+    font-size: 16px;
+    overflow-wrap: break-word;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+//投稿時のバリデーションメッセージ
+.error-form{
+    width: 65%;
+    margin: 0 auto;
+}
+
+.error-form-box{
+    background-color: #dcdcdc;
+    border: 3px solid #ff4500;
+    border-radius: 5px;
+    color: #dc143c;
+    margin-top: 20px;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.error-count{
+    font-size: 25px;
+}
+
+//投稿一覧ページ
+.expected-list{
+    width: 100%;
+    padding: 50px 60px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.expected-list h1{
+    display: inline-block;
+}
+
+.post-link{
+    background-color: #339900;
+    color: #fff;
+    border: 3px outset #47763c;
+    border-radius: 5px;
+    padding: 8px 20px;
+    margin: 5px 10px 0px 0px;
+    line-height: 1.5;
+    text-decoration: none;
+    float: right;
+}
+
+.predict-inner{
+    border: 2px solid #000;
+    border-radius: 5px;
+    margin-top: 25px;
+}
+
+.predict-image{
+    height: 200px;
+    width: 100%;
+}
+
+.post-products{
+    padding: 0 15px;
+    flex: 0 25%;
+    max-width: 25%;
+}

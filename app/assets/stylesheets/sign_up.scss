@@ -1,5 +1,5 @@
 .commonality-box{
-  padding: 60px 15px 0 15px;
+  padding-top: 60px;
   font-size: 16px;
   max-width: 1140px;
   width: 100%;
@@ -12,6 +12,7 @@
   margin: 0 auto;
   border-radius: 3px;
   background-color: #fff;
+  border: 2px solid #696969;
 }
 
 .sign-area{
@@ -53,6 +54,26 @@
 .login_attention{
   color: #009bc6;
   text-decoration: none;
+}
+
+.commonality-box{
+  max-width: 1140px;
+  width: 100%;
+  margin: 30px auto;
+}
+
+.test-account-box{
+  max-width: 500px;
+  padding: 30px 20px 10px 20px;
+  margin: 0 auto;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+.test-account-title{
+  font-size: 20px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 3px;
 }
 
 ///新規登録失敗時のメッセージ

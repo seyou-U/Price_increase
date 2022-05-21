@@ -1,0 +1,25 @@
+<div class="product-calculation">
+  <div class="product-calculation-container">
+    <div class="calculation-nav">
+      <h1>損失チェック</h1>
+      <p>このページでは値上げした金額が1年間でどれくらい家計に影響を与えるか計算し、シュミレーションすることができます。</p>
+    </div>
+    <div class="calculation-main">
+      <h3>( チェックする商品について )</h3>
+      <div class="product-information">
+        <div class="column-title">
+          <div class="column-title-list">商品画像</div>
+          <div class="column-title-list">商品名</div>
+          <div class="column-title-list">値上げ金額</div>
+        </div>
+        <div class="product-column">
+          <%= image_tag @product.image.url, class: "product-column-image" %>
+          <div class="product-column-list"><%= @product.name %></div>
+          <div class="product-column-list product-column-price">¥ <%= @product.high_price %></div>
+        </div>
+      </div>
+      <h3>( 購入頻度・使用頻度について入力してください )</h3>
+      <%= react_component("Keisan", {price: @product.high_price}) %>
+    </div>
+  </div>
+</div>
