@@ -1,14 +1,14 @@
 //値上げ予想商品投稿ページ
-.product-from{
+.from{
     width: 65%;
     margin: 0 auto;
 }
 
-.product-from h1{
+.from h1{
     padding: 25px 0 15px 30px;
 }
 
-.predict-product-information{
+.information{
     max-width: 900px;
     padding: 40px;
     margin: 0 auto;
@@ -45,14 +45,6 @@
 
 .any{
     background-color: #1e90ff;
-}
-
-.product-form{
-    border: 1.5px solid #696969;
-    padding: 8px;
-    margin: 5px;
-    border-radius: 3px;
-    width: 70%;
 }
 
 .product-text{
@@ -144,6 +136,52 @@ div.field_with_errors {
 
 .error-count{
     font-size: 25px;
+}
+
+.predict-comment{
+    padding: 0px 40px;
+}
+
+.predict-comment-title{
+    font-size: 30px;
+    border: 3px solid #dc143c;
+    padding: 15px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.comment-text{
+    border: 1.5px solid #696969;
+    border-radius: 3px;
+    margin-top: 5px;
+    resize: none;
+    height: 90px;
+    width: 90%;
+}
+
+.comment-btn{
+    padding: 7px;
+    margin-bottom: 10px;
+    width: 140px;
+    text-align: center;
+    color:#fff;
+    background: #0000cd;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.predict-comment h3{
+    font-weight: bold;
+    font-size: 25px;
+    padding: 30px 0px;
+}
+
+.user-comments{
+    border-bottom: 1px solid #696969;
+    padding: 20px;
+    font-size: 20px;
+    overflow-wrap: break-word;
 }
 
 //投稿一覧ページ
