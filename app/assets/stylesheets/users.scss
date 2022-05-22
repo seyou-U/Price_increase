@@ -66,3 +66,40 @@
     border-radius: 4px;
     text-decoration: none;
 }
+
+//アカウント編集ページ
+.edit-title{
+    font-size: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 4px;
+    border-bottom: 3px solid #ff4500;
+}
+
+.title{
+    font-weight: bold;
+    padding-right: 40px;
+}
+
+.edit-form{
+    padding-bottom: 15px;
+}
+
+.update{
+    background-color: #ff6347;
+    color: #fff;
+    border-color: #ff4500;
+    font-size: 15px;
+    font-weight: bold;
+    width: 250px;
+    display: block;
+    margin: 0 auto;
+}
+
+.back{
+    background-color: #007fff;
+    border-color: #0000cd;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 15px;
+}
