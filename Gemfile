@@ -29,6 +29,7 @@ gem 'devise-i18n'
 gem 'rails-i18n'
 gem 'react-rails'
 gem 'font-awesome-rails'
+gem 'gretel'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
