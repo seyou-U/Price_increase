@@ -17,11 +17,6 @@ crumb :price_increase_forecast do
   parent :root
 end
 
-crumb :favorite_list do
-  link "お気に入り商品一覧", users_favorite_path
-  parent :root
-end
-
 crumb :account_information do
   link "アカウント情報", users_path
   parent :root
