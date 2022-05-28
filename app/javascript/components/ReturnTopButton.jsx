@@ -51,6 +51,7 @@ const dynamicStyle= {
   position: "fixed",
   bottom: 15,
   right: 50,
+  marginRight: "3%",
   zIndex: 1
 }
 
