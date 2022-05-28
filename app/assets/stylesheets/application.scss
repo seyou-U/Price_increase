@@ -35,6 +35,10 @@ body::-webkit-scrollbar {
   float: right;
 }
 
+.hamburger-btn{
+  display: none;
+}
+
 .nav-link{
   display: inline-block;
   color: #fff;
@@ -131,5 +135,92 @@ body::-webkit-scrollbar {
   }
   a:hover {
     color: #ff0000;
+  }
+}
+
+//レスポンシブデザイン
+@media screen and (max-width: 1024px){
+  .hamburger-btn{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    display: block;
+    background: #333;
+    color: #fff;
+  }
+
+  .fa-bars{
+    font-size: 20px;
+  }
+
+  .nav-menu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #555;
+  }
+
+  .nav-link{
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    text-align: center;
+    color: #fff;
+    box-sizing: border-box;
+  }
+
+  .nav-menu{
+    transform: translateX(100vw);
+    transition: all .3s linear;
+  }
+
+  .nav-menu.is-active{
+    transform: translateX(0);
+  }
+
+  .top-title{
+    font-size: 120px!important;
+  }
+
+  .top-letter p{
+    font-size: 35px!important;;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .top-title{
+    font-size: 100px!important;
+  }
+
+  .introduction-container h2{
+    font-size: 40px!important;
+  }
+
+  .introduction-container p{
+    font-size: 20px!important;
+  }
+}
+
+@media screen and (max-width: 360px){
+  .top-title{
+    font-size: 60px!important;
+  }
+
+  .top-letter p{
+    font-size: 25px!important;;
+  }
+
+  .introduction-container h2{
+    font-size: 32px!important;
   }
 }
