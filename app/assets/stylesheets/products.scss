@@ -291,7 +291,7 @@
 
 .product-column-list{
     width: 50%;
-    font-size: 2.5vw;
+    font-size: 2vw;
     font-weight: bold;
     margin: auto 0;
     line-height: 30px;
@@ -412,6 +412,11 @@
   .column-title-list{
     margin: 0 5px;
   }
+
+  .product-column-list{
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 @media screen and (max-width: 360px){
@@ -448,6 +453,6 @@
   }
 
   .product-column-list{
-    font-size: 1px;
+    font-size: 1vw;
   }
 }
