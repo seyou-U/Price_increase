@@ -2,10 +2,9 @@
 .from{
     width: 65%;
     margin: 0 auto;
-}
-
-.from h1{
-    padding: 25px 0 15px 30px;
+    h1{
+        padding: 25px 0 15px 30px;
+    }
 }
 
 .information{
@@ -55,7 +54,7 @@
     width: 95%;
 }
 
-div.field_with_errors {
+div.field_with_errors{
     background-color: #ff4500;
     padding: 1px;
 }
@@ -190,10 +189,10 @@ div.field_with_errors {
     padding: 50px 60px;
     justify-content: space-between;
     flex-wrap: wrap;
-}
-
-.expected-list h1{
-    display: inline-block;
+    h1{
+        display: inline-block;
+        font-size: 4.5vw;
+    }
 }
 
 .post-link{
@@ -201,8 +200,8 @@ div.field_with_errors {
     color: #fff;
     border: 3px outset #47763c;
     border-radius: 5px;
-    padding: 8px 20px;
-    margin: 5px 10px 0px 0px;
+    padding: 10px 20px;
+    margin: 10px 10px 0px 0px;
     line-height: 1.5;
     text-decoration: none;
     float: right;
@@ -223,4 +222,45 @@ div.field_with_errors {
     padding: 0 15px;
     flex: 0 25%;
     max-width: 25%;
+}
+
+@media screen and (max-width: 1024px){
+    .post-products{
+        padding: 0 5px;
+    }
+}
+
+@media screen and (max-width: 743px){
+    .post-products{
+        flex: 0 50%;
+        max-width: 50%;
+    }
+
+    .post-link{
+        padding: 5px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 585px){
+    .post-products{
+        flex: 0 100%;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .up-products{
+        margin: 0px;
+    }
+
+    .expected-list h1{
+        font-size: 8vw;
+        line-height: 45px;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .post-products{
+        max-width: 100%;
+    }
 }
