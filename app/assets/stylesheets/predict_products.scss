@@ -83,13 +83,12 @@ div.field_with_errors{
     border-radius: 10px;
 }
 
-.product-up-user{
+.up-user{
     font-size: 20px;
     padding-top: 10px;
 }
 
-.up-user{
-    font-size: 20px;
+.product-up-user{
     font-weight: bold;
 }
 
@@ -147,6 +146,7 @@ div.field_with_errors{
     padding: 15px;
     display: inline-block;
     border-radius: 10px;
+    line-height: 30px;
 }
 
 .comment-text{
@@ -181,6 +181,7 @@ div.field_with_errors{
     padding: 20px;
     font-size: 20px;
     overflow-wrap: break-word;
+    line-height: 1.7;
 }
 
 //投稿一覧ページ
@@ -261,6 +262,16 @@ div.field_with_errors{
     .product-text{
         height: 200px;
     }
+
+    .up-user{
+        font-size: 15px;
+        float: right;
+    }
+
+    .product-up-user{
+        padding-top: 0px;
+        padding-bottom: 20px;
+    }
 }
 
 @media screen and (max-width: 360px){
@@ -275,5 +286,15 @@ div.field_with_errors{
 
     .product-file{
         width: 200px;
+    }
+
+    .predict-comment-title{
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .comment-text{
+        height: 120px;
+        width: 95%;
     }
 }

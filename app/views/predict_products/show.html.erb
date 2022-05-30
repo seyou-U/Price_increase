@@ -7,8 +7,10 @@
       <% else %>
         <%= image_tag "no_image.jpeg", class: "predict-product-image" %>
       <% end %>
-      <p class="product-up-user">(予想したユーザー)</p>
-      <p class="up-user"><%= @user.username %></p>
+      <div class="up-user">
+        <p>(予想したユーザー)</p>
+        <p class="product-up-user"><%= @user.username %></p>
+      </div>
     </div>
     <div class="product-right">
       <div class="product-right-container">
