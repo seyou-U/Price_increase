@@ -72,6 +72,7 @@
     margin-bottom: 20px;
     padding-bottom: 4px;
     border-bottom: 3px solid #ff4500;
+    line-height: 35px;
 }
 
 .title{
@@ -128,5 +129,20 @@
     .user-icon{
         width: 85%;
         height: 85%;
+    }
+
+    .title{
+        display: inline-block;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .edit-form {
+        width: 100%;
+    }
+
+    .update{
+        width: 100%;
     }
 }
