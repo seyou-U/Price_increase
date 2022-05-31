@@ -10,17 +10,15 @@
 
 //アカウントの情報ページ
 .account-page-container{
-    margin: 80px auto;
+    margin: 80px 100px;
     padding: 20px 30px;
     background-color: #fff;
     border: 2px solid #808080;
     border-radius: 3px;
-    max-width: 900px;
 }
 
 .account-title{
     padding: 20px 50px 0px 15px;
-    margin-left: 20px;
     border-bottom: 2px solid #d3d3d3;
     float: left;
 }
@@ -35,7 +33,6 @@
     border-radius: 50%;
     width: 280px;
     height: 280px;
-    margin-bottom: 40px;
 }
 
 .user-content{
@@ -49,6 +46,8 @@
     display: flex;
     margin: 0 -15px;
     flex-wrap: wrap;
+    word-break: break-word;
+    text-align: left;
 }
 
 .user-title{
@@ -102,4 +101,32 @@
     text-decoration: none;
     text-align: center;
     margin-top: 15px;
+}
+
+@media screen and (max-width: 1024px){
+    .account-page-container{
+        margin: 80px 40px;
+    }
+}
+
+@media screen and (max-width: 585px){
+    .account-title{
+        padding: 20px 15px 0px 15px;
+        h1{
+            font-size: 6vw;
+        }
+    }
+
+    .user-title{
+        padding-top: 0px;
+    }
+
+    .user-content{
+        margin: 50px 0px;
+    }
+
+    .user-icon{
+        width: 85%;
+        height: 85%;
+    }
 }
