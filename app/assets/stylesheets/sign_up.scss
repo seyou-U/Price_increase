@@ -18,14 +18,13 @@
 .sign-area{
   max-width: 75%;
   margin: 0 auto;
-}
-
-.sign-area p{
-  text-align: center;
-  padding-bottom: 20px;
-  font-weight: bold;
-  font-size: 35px;
-  border-bottom: 1px solid #000
+  p{
+    text-align: center;
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-size: 35px;
+    border-bottom: 1px solid #000
+  }
 }
 
 .text{
@@ -102,4 +101,15 @@
 //パスワード再設定画面
 .remake-password{
   margin-bottom: 20px;
+}
+
+//レスポンシブデザイン
+@media screen and (max-width: 360px){
+  .sign-area p{
+      font-size: 24px;
+  }
+
+  .test-account-box p{
+    word-break: break-word;
+  }
 }
