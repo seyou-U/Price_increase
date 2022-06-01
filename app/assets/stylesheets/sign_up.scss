@@ -54,6 +54,8 @@
 .login_attention{
   color: #009bc6;
   text-decoration: none;
+  padding-bottom: 10px;
+  display: inline-block;
 }
 
 .commonality-box{
@@ -104,6 +106,12 @@
 }
 
 //レスポンシブデザイン
+@media screen and (max-width: 585px){
+  .sign-area p{
+    font-size: 23px;
+  }
+}
+
 @media screen and (max-width: 360px){
   .sign-area p{
       font-size: 20px;
