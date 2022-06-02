@@ -198,6 +198,14 @@ body::-webkit-scrollbar {
 }
 
 @media screen and (max-width: 600px){
+  .login-btn, .new-user-btn{
+    padding: 6px;
+  }
+
+  .nav-item{
+    margin-right: -18px;
+  }
+  
   .top-title{
     font-size: 100px!important;
   }
@@ -212,6 +220,14 @@ body::-webkit-scrollbar {
 }
 
 @media screen and (max-width: 360px){
+  .logo-title{
+    font-size: 25px;
+  }
+
+  .login-btn, .new-user-btn{
+    padding: 4px;
+  }
+
   .top-title{
     font-size: 60px!important;
   }
