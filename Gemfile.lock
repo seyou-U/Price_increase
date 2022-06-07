@@ -106,8 +106,14 @@ GEM
       warden (~> 1.2.3)
     devise-i18n (1.10.2)
       devise (>= 4.8.0)
+    diff-lcs (1.5.0)
     erubi (1.10.0)
     execjs (2.8.1)
+    factory_bot (6.2.1)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.2.0)
+      factory_bot (~> 6.2.0)
+      railties (>= 5.0.0)
     ffi (1.15.5)
     font-awesome-rails (4.7.0.8)
       railties (>= 3.2, < 8.0)
@@ -213,6 +219,23 @@ GEM
       railties (>= 5.0)
     rexml (3.2.5)
     rmagick (4.2.4)
+    rspec-core (3.11.0)
+      rspec-support (~> 3.11.0)
+    rspec-expectations (3.11.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.11.0)
+    rspec-mocks (3.11.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.11.0)
+    rspec-rails (5.1.2)
+      actionpack (>= 5.2)
+      activesupport (>= 5.2)
+      railties (>= 5.2)
+      rspec-core (~> 3.10)
+      rspec-expectations (~> 3.10)
+      rspec-mocks (~> 3.10)
+      rspec-support (~> 3.10)
+    rspec-support (3.11.0)
     rubocop (0.93.1)
       parallel (~> 1.10)
       parser (>= 2.7.1.5)
@@ -310,6 +333,7 @@ DEPENDENCIES
   carrierwave
   devise
   devise-i18n
+  factory_bot_rails
   font-awesome-rails
   gretel
   jbuilder (~> 2.7)
@@ -323,6 +347,7 @@ DEPENDENCIES
   ransack
   react-rails
   rmagick
+  rspec-rails
   rubocop-airbnb
   sass-rails (>= 6)
   selenium-webdriver (>= 4.0.0.rc1)
