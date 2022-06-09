@@ -5,6 +5,8 @@ ja:
         name: 商品名
         explanation: 説明
         reason: 理由
+      user:
+        username: ユーザーネーム
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
