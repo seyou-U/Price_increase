@@ -8,6 +8,7 @@ require 'rspec/rails'
 require 'devise'
 require File.expand_path("spec/support/controller_macros.rb")
 require_relative 'support/controller_macros'
+require 'capybara/rspec'
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -37,11 +38,9 @@ RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.include Devise::Test::IntegrationHelpers, type: :request
-  config.include FactoryBot::Syntax::Methods
   config.include Devise::Test::ControllerHelpers, type: :controller
-  config.include Devise::Test::IntegrationHelpers, type: :request
-  config.extend ControllerMacros, :type => :controller
-
+  config.include Devise::Test::IntegrationHelpers, type: :feature
+  config.include FactoryBot::Syntax::Methods
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
