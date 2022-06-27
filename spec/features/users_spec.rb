@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Users_account", type: :feature do
+RSpec.feature "Users", type: :feature do
   given!(:user) { create(:user, email: "foobar@exaple") }
 
   describe "ログイン、ログアウト" do
