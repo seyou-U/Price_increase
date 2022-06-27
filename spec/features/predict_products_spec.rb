@@ -27,7 +27,7 @@ RSpec.feature "Predict_products", type: :feature do
         visit predict_products_path
         within(".post-products") do
           expect(page).to have_selector("img[src$='test.jpg']")
-          expect(page).to have_content ("テスト")
+          expect(page).to have_content("テスト")
         end
       end
 
@@ -39,11 +39,11 @@ RSpec.feature "Predict_products", type: :feature do
           page.all(".product-text")[1].set("原材料の高騰によるもの.")
           click_button "投稿"
         end
-        expect(page).to have_content (user1.username)
+        expect(page).to have_content(user1.username)
         click_link "ログアウト"
         sign_in user2
         visit predict_products_path
-        expect(page).to have_content ("テスト")
+        expect(page).to have_content("テスト")
       end
     end
 
@@ -69,10 +69,10 @@ RSpec.feature "Predict_products", type: :feature do
         end
         within(".product-show") do
           expect(page).to have_selector("img[src$='test.jpg']")
-          expect(page).to have_content (user1.username)
-          expect(page).to have_content ("テスト2")
-          expect(page).to have_content ("来年ごろから値上げする予想です。")
-          expect(page).to have_content ("原材料の高騰によるもの。")
+          expect(page).to have_content(user1.username)
+          expect(page).to have_content("テスト2")
+          expect(page).to have_content("来年ごろから値上げする予想です。")
+          expect(page).to have_content("原材料の高騰によるもの。")
         end
       end
 

@@ -13,7 +13,7 @@ RSpec.feature "Predict_product_comments", type: :feature do
     scenario "値上げ予想に対してのコメントが正常におこなわれること" do
       find(".comment-text").set("テストテストテスト")
       click_button "コメントする"
-      expect(page).to have_content ("テストテストテスト")
+      expect(page).to have_content("テストテストテスト")
     end
   end
 end

@@ -14,18 +14,18 @@ RSpec.feature "Products", type: :feature do
         visit products_path
         find(".search-form").set("テスト")
         click_button "検索"
-        expect(page).to have_content (product1.name)
-        expect(page).to have_content (product2.name)
-        expect(page).not_to have_content (product3.name)
+        expect(page).to have_content(product1.name)
+        expect(page).to have_content(product2.name)
+        expect(page).not_to have_content(product3.name)
       end
 
       scenario "キーワードを何も入力しない状態で検索すると全ての商品が表示されること" do
         sign_in user
         visit products_path
         click_button "検索"
-        expect(page).to have_content (product1.name)
-        expect(page).to have_content (product2.name)
-        expect(page).to have_content (product3.name)
+        expect(page).to have_content(product1.name)
+        expect(page).to have_content(product2.name)
+        expect(page).to have_content(product3.name)
       end
     end
 
@@ -41,8 +41,8 @@ RSpec.feature "Products", type: :feature do
         visit products_path
         select "食料品", from: "name"
         click_button "検索"
-        expect(page).to have_content (product1.name)
-        expect(page).not_to have_content (product2.name)
+        expect(page).to have_content(product1.name)
+        expect(page).not_to have_content(product2.name)
       end
     end
 
@@ -60,9 +60,9 @@ RSpec.feature "Products", type: :feature do
         find(".search-form").set("テスト")
         select "食料品", from: "name"
         click_button "検索"
-        expect(page).to have_content (product1.name)
-        expect(page).not_to have_content (product2.name)
-        expect(page).not_to have_content (product3.name)
+        expect(page).to have_content(product1.name)
+        expect(page).not_to have_content(product2.name)
+        expect(page).not_to have_content(product3.name)
       end
     end
   end

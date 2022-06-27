@@ -48,10 +48,10 @@ RSpec.feature "Product_favorites", type: :feature do
     end
 
     scenario "お気に入りに追加した商品の名前と値上げ金額が表示されていること" do
-      expect(page).to have_content (product1.name)
-      expect(page).to have_content (product1.high_price)
-      expect(page).to have_no_content (product2.high_price)
-      expect(page).to have_no_content (product2.high_price)
+      expect(page).to have_content(product1.name)
+      expect(page).to have_content(product1.high_price)
+      expect(page).to have_no_content(product2.high_price)
+      expect(page).to have_no_content(product2.high_price)
     end
 
     scenario "お気に入り商品の商品詳細ボタンを押したときその商品の詳細画面に遷移すること" do

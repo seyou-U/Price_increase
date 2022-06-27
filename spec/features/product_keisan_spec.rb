@@ -20,9 +20,9 @@ RSpec.feature "Product_keisan", type: :feature do
 
     scenario "損失チェックの計算が正しいこと" do
       find("#Text").set(1)
-      expect(page).to have_no_content(product1.high_price*1*52)
+      expect(page).to have_no_content(product1.high_price * 1 * 52)
       click_button "チェックしてみる"
-      expect(page).to have_content(product1.high_price*1*52)
+      expect(page).to have_content(product1.high_price * 1 * 52)
     end
   end
 end

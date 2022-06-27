@@ -22,7 +22,7 @@ RSpec.feature "Users_account", type: :feature do
       page.all(".text")[4].set("foobar")
       click_button "更新"
       visit users_path
-      expect(page).to have_content ("foobar")
+      expect(page).to have_content("foobar")
     end
 
     scenario "メールアドレスの変更が成功すること" do
@@ -31,7 +31,7 @@ RSpec.feature "Users_account", type: :feature do
       page.all(".text")[4].set("foobar")
       click_button "更新"
       visit users_path
-      expect(page).to have_content ("test@exaple")
+      expect(page).to have_content("test@exaple")
     end
 
     scenario "ユーザーアイコンの変更が成功すること" do
@@ -66,7 +66,7 @@ RSpec.feature "Users_account", type: :feature do
       expect(page).to have_content "現在のパスワードは不正な値です"
     end
 
-    scenario "現在のパスワードが誤っている場合ユーザー情報の変更ができないこと" do
+    scenario "パスワードと確認用のパスワードが異なるときパスワードの変更ができないこと" do
       click_link "編集"
       page.all(".text")[2].set("testtest")
       page.all(".text")[3].set("barbaz")
