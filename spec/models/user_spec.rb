@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   describe "ユーザー登録" do
     before do
-      @user = FactoryBot.build(:user)
+      @user = build(:user)
     end
 
     it "ユーザーネーム、メールアドレス、パスワードと確認用のパスワードが正しく入力されていれば登録できること" do
@@ -11,7 +11,7 @@ RSpec.describe User, type: :model do
     end
 
     it "同じメールアドレスを登録できないこと" do
-      user1 = FactoryBot.create(:user)
+      user1 = create(:user)
       @user.email = user1.email
       @user.valid?
       expect(@user.errors.full_messages).to include("メールアドレスはすでに存在します")
