@@ -9,13 +9,13 @@
 
 .textSide{
     padding: 15px;
-    font-size: 20px;
+    font-size: 2vw;
     font-weight: bold;
 }
 
 #Text{
     height: 20px;
-    width: 200px;
+    width: 20vw;
     padding: 15px 10px;
     font-size: 16px;
     border-radius: 5px;
@@ -34,16 +34,43 @@
     border-radius: 5px;
     font-size: 25px;
     color: #fff;
-    width: 500px;
+    width: 40vw;
     cursor: pointer;
 }
 
 .resultData{
-    font-size: 50px;
+    font-size: 5vw;
     font-weight: bold;
     padding-top: 30px;
     padding-bottom: 20px;
     color: #ff0000;
     font-family: 'ヒラギノ明朝 ProN';
     letter-spacing: 3px;
+    line-height: 65px;
+    text-align: center;
+}
+
+//レスポンシブデザイン
+@media screen and (max-width: 743px){
+    .resultData{
+        line-height: 55px;
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .checkButton{
+        width: 30vw;
+        font-size: 10px;
+    }
+
+    .resultData{
+        font-size: 20px;
+        line-height: 35px;
+    }
+
+    .textSide{
+        font-size: 10px;
+        padding: 5px;
+    }
 }

@@ -1,0 +1,15 @@
+version: 2.1
+orbs:
+  ruby: circleci/ruby@1.1.2
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:3.0.2
+    steps:
+      - checkout
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - build

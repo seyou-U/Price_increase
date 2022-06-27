@@ -12,18 +12,22 @@
   margin: 0 auto;
 }
 
-.top-title h1{
+.top-title{
   font-size: 200px;
   font-family: cursive;
   transform: rotate(-3deg);
   padding-top: 20px;
+  word-wrap: break-word;
+  line-height: 70px;
 }
 
-.top-title p{
+.top-letter p{
   font-size: 40px;
   padding-top: 100px;
   font-weight: bold;
   float: right;
+  line-height: 50px;
+  word-wrap: break-word;
 }
 
 .introduction-container{
@@ -41,6 +45,8 @@
   font-weight: bold;
   border-bottom: 2px solid #000;
   padding-bottom: 30px;
+  word-wrap: break-word;
+  line-height: 50px;
 }
 
 .introduction-container p{
@@ -48,6 +54,7 @@
   font-weight: bold;
   font-size: 25px;
   padding-bottom: 20px;
+  line-height: 35px;
 }
 
 .introduction-period{

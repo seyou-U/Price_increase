@@ -11,5 +11,4 @@ class FavoritesController < ApplicationController
     @favorite.destroy
     redirect_to product_path(params[:product_id])
   end
-
 end

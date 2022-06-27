@@ -1,3 +1,4 @@
+<% breadcrumb :price_increase_product, @predict_product %>
 <div class="product-show">
   <div class="product-show-container">
     <div class="product-left">
@@ -6,8 +7,17 @@
       <% else %>
         <%= image_tag "no_image.jpeg", class: "predict-product-image" %>
       <% end %>
-      <p class="product-up-user">(予想したユーザー)</p>
-      <p class="up-user"><%= @user.username %></p>
+      <div class="up-user">
+        <p>(予想したユーザー)</p>
+        <div class="up-user-inf">
+          <% if @user.user_image? %>
+            <%= image_tag @user.user_image.url, class: "product-user-icon" %>
+          <% else %>
+            <%= image_tag "initial.jpeg", class: "product-user-icon" %>
+          <% end %>
+          <p class="product-up-user"><%= @user.username %></p>
+        </div>
+      </div>
     </div>
     <div class="product-right">
       <div class="product-right-container">

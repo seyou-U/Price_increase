@@ -2,10 +2,10 @@
 .from{
     width: 65%;
     margin: 0 auto;
-}
-
-.from h1{
-    padding: 25px 0 15px 30px;
+    h1{
+        padding: 50px 0 15px 0;
+        font-size: 4.5vw;
+    }
 }
 
 .information{
@@ -20,7 +20,6 @@
     display: flex;
     font-weight: bold;
     padding-top: 20px;
-    padding-right: 15px;
     font-size: 22px;
 }
 
@@ -55,7 +54,7 @@
     width: 95%;
 }
 
-div.field_with_errors {
+div.field_with_errors{
     background-color: #ff4500;
     padding: 1px;
 }
@@ -84,13 +83,18 @@ div.field_with_errors {
     border-radius: 10px;
 }
 
-.product-up-user{
+.up-user{
     font-size: 20px;
     padding-top: 10px;
 }
 
-.up-user{
-    font-size: 20px;
+.product-user-icon{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.product-up-user{
     font-weight: bold;
 }
 
@@ -129,7 +133,7 @@ div.field_with_errors {
     border: 3px solid #ff4500;
     border-radius: 5px;
     color: #dc143c;
-    margin-top: 20px;
+    margin-top: 35px;
     padding-left: 10px;
     font-weight: bold;
 }
@@ -148,6 +152,7 @@ div.field_with_errors {
     padding: 15px;
     display: inline-block;
     border-radius: 10px;
+    line-height: 30px;
 }
 
 .comment-text{
@@ -182,6 +187,7 @@ div.field_with_errors {
     padding: 20px;
     font-size: 20px;
     overflow-wrap: break-word;
+    line-height: 1.7;
 }
 
 //投稿一覧ページ
@@ -190,10 +196,10 @@ div.field_with_errors {
     padding: 50px 60px;
     justify-content: space-between;
     flex-wrap: wrap;
-}
-
-.expected-list h1{
-    display: inline-block;
+    h1{
+        display: inline-block;
+        font-size: 4.5vw;
+    }
 }
 
 .post-link{
@@ -201,8 +207,8 @@ div.field_with_errors {
     color: #fff;
     border: 3px outset #47763c;
     border-radius: 5px;
-    padding: 8px 20px;
-    margin: 5px 10px 0px 0px;
+    padding: 10px 20px;
+    margin: 10px 10px 0px 0px;
     line-height: 1.5;
     text-decoration: none;
     float: right;
@@ -223,4 +229,78 @@ div.field_with_errors {
     padding: 0 15px;
     flex: 0 25%;
     max-width: 25%;
+}
+
+@media screen and (max-width: 1024px){
+    .post-products{
+        padding: 0 5px;
+    }
+}
+
+@media screen and (max-width: 743px){
+    .post-products{
+        flex: 0 50%;
+        max-width: 50%;
+    }
+
+    .post-link{
+        padding: 5px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 585px){
+    .post-products{
+        flex: 0 100%;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .up-products{
+        margin: 0px;
+    }
+
+    .expected-list h1{
+        font-size: 8vw;
+        line-height: 45px;
+    }
+
+    .product-text{
+        height: 200px;
+    }
+
+    .up-user{
+        font-size: 15px;
+        float: right;
+    }
+
+    .product-up-user{
+        padding-top: 0px;
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .post-products{
+        max-width: 100%;
+    }
+
+    .from h1{
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .product-file{
+        width: 200px;
+    }
+
+    .predict-comment-title{
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .comment-text{
+        height: 120px;
+        width: 95%;
+    }
 }

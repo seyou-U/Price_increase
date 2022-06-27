@@ -1,3 +1,4 @@
+<% breadcrumb :loss_check_product, @product %>
 <div class="product-calculation">
   <div class="product-calculation-container">
     <div class="calculation-nav">
@@ -13,7 +14,11 @@
           <div class="column-title-list">値上げ金額</div>
         </div>
         <div class="product-column">
-          <%= image_tag @product.image.url, class: "product-column-image" %>
+          <% if @product.image? %>
+            <%= image_tag @product.image.url, class: "product-column-image" %>
+          <% else %>
+            <%= image_tag "no_image.jpeg", class: "product-column-image" %>
+          <% end %>
           <div class="product-column-list"><%= @product.name %></div>
           <div class="product-column-list product-column-price">¥ <%= @product.high_price %></div>
         </div>

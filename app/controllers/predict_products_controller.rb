@@ -9,7 +9,7 @@ class PredictProductsController < ApplicationController
     @predict_product.user_id = current_user.id
     if @predict_product.save
       redirect_to predict_product_path(@predict_product)
-     else
+    else
       render "new"
     end
   end
@@ -26,7 +26,9 @@ class PredictProductsController < ApplicationController
   end
 
   private
+
   def predict_product_params
-    params.require(:predict_product).permit(:name, :explanation, :reason, :image).merge(user_id: current_user.id)
+    params.require(:predict_product).permit(:name, :explanation,
+:reason, :image).merge(user_id: current_user.id)
   end
 end

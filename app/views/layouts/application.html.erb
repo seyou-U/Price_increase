@@ -25,6 +25,9 @@
         <p class = "alert"><%= flash[:alert] %></p>
       <% end %>
     </div>
+    <div class="breadcrumbs">
+      <%= breadcrumbs pretext: "",separator: " > ", class: "breadcrumbs-list" %>
+    </div>
     <%= yield %>
     <footer class="footer">
       <p>© 2022 Copylight. Neagaridus</p>

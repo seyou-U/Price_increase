@@ -3,24 +3,22 @@
     margin-top: 25px;
     margin-bottom: 10px;
     margin-left: -10px;
-    padding: 15px;
+    padding: 30px;
     font-weight: bold;
     border: 5px solid #fff;
 }
 
 //アカウントの情報ページ
 .account-page-container{
-    margin: 30px auto;
+    margin: 80px 100px;
     padding: 20px 30px;
     background-color: #fff;
     border: 2px solid #808080;
     border-radius: 3px;
-    max-width: 900px;
 }
 
 .account-title{
     padding: 20px 50px 0px 15px;
-    margin-left: 20px;
     border-bottom: 2px solid #d3d3d3;
     float: left;
 }
@@ -35,7 +33,6 @@
     border-radius: 50%;
     width: 280px;
     height: 280px;
-    margin-bottom: 40px;
 }
 
 .user-content{
@@ -49,6 +46,8 @@
     display: flex;
     margin: 0 -15px;
     flex-wrap: wrap;
+    word-break: break-word;
+    text-align: left;
 }
 
 .user-title{
@@ -65,4 +64,85 @@
     font-size: 18px;
     border-radius: 4px;
     text-decoration: none;
+}
+
+//アカウント編集ページ
+.edit-title{
+    font-size: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 4px;
+    border-bottom: 3px solid #ff4500;
+    line-height: 35px;
+}
+
+.title{
+    font-weight: bold;
+    padding-right: 40px;
+}
+
+.edit-form{
+    padding-bottom: 15px;
+}
+
+.update{
+    background-color: #ff6347;
+    color: #fff;
+    border-color: #ff4500;
+    font-size: 15px;
+    font-weight: bold;
+    width: 250px;
+    display: block;
+    margin: 0 auto;
+}
+
+.back{
+    background-color: #007fff;
+    border-color: #0000cd;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 15px;
+}
+
+@media screen and (max-width: 1024px){
+    .account-page-container{
+        margin: 80px 40px;
+    }
+}
+
+@media screen and (max-width: 585px){
+    .account-title{
+        padding: 20px 15px 0px 15px;
+        h1{
+            font-size: 6vw;
+        }
+    }
+
+    .user-title{
+        padding-top: 0px;
+    }
+
+    .user-content{
+        margin: 50px 0px;
+    }
+
+    .user-icon{
+        width: 85%;
+        height: 85%;
+    }
+
+    .title{
+        display: inline-block;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .edit-form {
+        width: 100%;
+    }
+
+    .update{
+        width: 100%;
+    }
 }
