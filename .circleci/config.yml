@@ -8,6 +8,11 @@ jobs:
       - checkout:
           path: ~/Price_increase
       - run:
+          name: Linuxbrew のインストールと設定
+          command: |
+          sudo apt-get install build-essential curl file git
+          sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"      echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin/:$PATH"' >> $BASH_ENV      echo 'export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"' >> $BASH_ENV      echo 'export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"' >> $BASH_ENV
+      - run:
           name: bundle installの実行
           command: |
             brew install imagemagick@6
@@ -31,6 +36,11 @@ jobs:
     steps:
       - checkout:
           path:  ~/Price_increase
+      - run:
+          name: Linuxbrew のインストールと設定
+          command: |
+          sudo apt-get install build-essential curl file git
+          sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"      echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin/:$PATH"' >> $BASH_ENV      echo 'export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"' >> $BASH_ENV      echo 'export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"' >> $BASH_ENV
       - run:
           name: bundle installの実行
           command: |
