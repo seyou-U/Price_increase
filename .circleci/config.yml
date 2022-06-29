@@ -1,7 +1,4 @@
 version: 2.1
-orbs:
-  ruby: circleci/ruby@1.1.2
-
 jobs:
   build:
     working_directory: ~/Price_increase
@@ -10,7 +7,11 @@ jobs:
     steps:
       - checkout:
           path: ~/Price_increase
-      - ruby/install-deps
+      - run:
+          name: bundle installの実行
+          command: |
+            brew install imagemagick@6
+            bundle install
 
   test:
     docker:
@@ -30,7 +31,11 @@ jobs:
     steps:
       - checkout:
           path:  ~/Price_increase
-      - ruby/install-deps
+      - run:
+          name: bundle installの実行
+          command: |
+            brew install imagemagick@6
+            bundle install
       - run:
           name: Database setup
           command: bundle exec rake db:schema:load
