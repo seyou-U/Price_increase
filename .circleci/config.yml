@@ -4,16 +4,19 @@ orbs:
 
 jobs:
   build:
+    working_directory: ~/repo
     docker:
-      - image: circleci/ruby:3.0.2
+      - image: cimg/ruby:3.0.2
     steps:
       - checkout:
           path: ~/Price_increase
-      - ruby/install-deps
+      - run:
+          name: bundle installの実行
+          command: bundle install --path vendor/bundle
 
   test:
     docker:
-      - image: circleci/ruby:3.0.2
+      - image: cimg/ruby:3.0.2
       - image: circleci/mysql:8.0.29
         environment:
           MYSQL_ALLOW_EMPTY_PASSWORD: "true"
@@ -28,7 +31,9 @@ jobs:
     steps:
       - checkout:
           path:  ~/Price_increase
-      - ruby/install-deps
+      - run:
+          name: bundle installの実行
+          command: bundle install --path vendor/bundle
       - run:
           name: Database setup
           command: bundle exec rake db:schema:load
