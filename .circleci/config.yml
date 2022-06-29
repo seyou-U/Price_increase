@@ -1,5 +1,4 @@
 version: 2.1
-
 orbs:
   ruby: circleci/ruby@1.1.2
 
@@ -8,40 +7,35 @@ jobs:
     docker:
       - image: circleci/ruby:3.0.2
     steps:
-      - checkout
+      - checkout:
+          path: ~/Price_increase
       - ruby/install-deps
 
   test:
     docker:
       - image: circleci/ruby:3.0.2
-      - image: cimg/mysql:8.0
+      - image: circleci/mysql:8.0.29
         environment:
+          MYSQL_ALLOW_EMPTY_PASSWORD: "true"
           MYSQL_ROOT_PASSWORD: ""
           MYSQL_DATABASE: price_increase_test
           MYSQL_USER: root
     environment:
-      BUNDLE_JOBS: "4"
+      BUNDLE_JOBS: "3"
       BUNDLE_RETRY: "3"
-      PGHOST: 127.0.0.1
+      APP_DATABASE_HOST: "127.0.0.1"
       RAILS_ENV: test
     steps:
-      - setup
-      - run:
-          name: bundle install
-          command: bundle install
-      - run:
-          name: rails db:migrate
-          command: bundle exec rails db:migrate
+      - checkout:
+          path:  ~/Price_increase
+      - ruby/install-deps
       - run:
           name: Database setup
-          command: bundle exec rails db:schema:load 
-      - run:
-          name: Rspec
-          command: bundle exec rspec
+          command: bundle exec rake db:schema:load
 
 workflows:
   version: 2
-  test_and_deploy:
+  build_test:
     jobs:
       - build
       - test:
