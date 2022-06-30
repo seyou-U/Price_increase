@@ -18,7 +18,7 @@ jobs:
   test:
     docker:
       - image: cimg/ruby:3.0.2
-      - image: circleci/mysql:8.0.28
+      - image: cimg/mysql:8.0.28
         environment:
           MYSQL_ALLOW_EMPTY_PASSWORD: "true"
           MYSQL_ROOT_PASSWORD: ""
