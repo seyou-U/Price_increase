@@ -1,4 +1,7 @@
 version: 2.1
+orbs:
+  ruby: circleci/ruby@1.1.2
+
 jobs:
   build:
     working_directory: ~/Price_increase
@@ -8,15 +11,9 @@ jobs:
       - checkout:
           path: ~/Price_increase
       - run:
-          name: Linuxbrew のインストールと設定
-          command: |
-          sudo apt-get install build-essential curl file git
-          sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"      echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin/:$PATH"' >> $BASH_ENV      echo 'export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"' >> $BASH_ENV      echo 'export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"' >> $BASH_ENV
-      - run:
-          name: bundle installの実行
-          command: |
-            brew install imagemagick@6
-            bundle install
+          name: bundle installのための準備
+          command: sudo apt-get update && sudo apt-get install -y libmagickcore-dev
+      - ruby/install-deps
 
   test:
     docker:
@@ -37,15 +34,9 @@ jobs:
       - checkout:
           path:  ~/Price_increase
       - run:
-          name: Linuxbrew のインストールと設定
-          command: |
-          sudo apt-get install build-essential curl file git
-          sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"      echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin/:$PATH"' >> $BASH_ENV      echo 'export MANPATH="/home/linuxbrew/.linuxbrew/share/man:$MANPATH"' >> $BASH_ENV      echo 'export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:$INFOPATH"' >> $BASH_ENV
-      - run:
-          name: bundle installの実行
-          command: |
-            brew install imagemagick@6
-            bundle install
+          name: bundle installのための準備
+          command: sudo apt-get update && sudo apt-get install -y libmagickcore-dev
+      - ruby/install-deps
       - run:
           name: Database setup
           command: bundle exec rake db:schema:load
