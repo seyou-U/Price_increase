@@ -20,9 +20,10 @@ jobs:
       - image: cimg/ruby:3.0.2
       - image: circleci/mysql:8.0.28
         environment:
-          MYSQL_ALLOW_EMPTY_PASSWORD: "true"
-          MYSQL_ROOT_PASSWORD: ""
-          MYSQL_DATABASE: Price_increase_test
+          MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: test_db
+          MYSQL_USER: user
+          MYSQL_PASSWORD: passw0rd
     environment:
       BUNDLE_JOBS: "3"
       BUNDLE_RETRY: "3"
