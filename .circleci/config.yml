@@ -39,7 +39,7 @@ jobs:
       - ruby/install-deps
       - run:
           name: Database setup
-          command: bundle exec rails db:migrate
+          command: bundle exec rake db:schema:load
 
 workflows:
   version: 2
