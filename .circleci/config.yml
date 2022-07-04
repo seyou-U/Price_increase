@@ -3,7 +3,7 @@ orbs:
   ruby: circleci/ruby@1.1.2
 
 jobs:
- build:
+  build:
     working_directory: ~/Price_increase
     docker:
       - image: cimg/ruby:3.0.2
