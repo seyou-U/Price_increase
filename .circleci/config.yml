@@ -19,7 +19,7 @@ jobs:
     docker:
       - image: cimg/ruby:3.0.2
         environment:
-          DB_HOST: 127.0.0.1
+          DATABASE_HOST: 127.0.0.1
       - image: cimg/mysql:8.0.28
         environment:
           MYSQL_ALLOW_EMPTY_PASSWORD: "true"
