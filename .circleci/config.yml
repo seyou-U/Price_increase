@@ -18,12 +18,14 @@ jobs:
   test:
     docker:
       - image: cimg/ruby:3.0.2
+        environment:
+          DB_HOST: 127.0.0.1
       - image: cimg/mysql:8.0.28
         environment:
           MYSQL_ALLOW_EMPTY_PASSWORD: "true"
           MYSQL_ROOT_PASSWORD: ""
           MYSQL_DATABASE: Price_increase_test
-          MYSQL_USER: user
+          MYSQL_USER: root
     environment:
       BUNDLE_JOBS: "3"
       BUNDLE_RETRY: "3"
