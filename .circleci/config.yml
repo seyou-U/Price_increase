@@ -3,6 +3,18 @@ orbs:
   ruby: circleci/ruby@1.1.2
 
 jobs:
+ build:
+    working_directory: ~/Price_increase
+    docker:
+      - image: cimg/ruby:3.0.2
+    steps:
+      - checkout:
+          path: ~/Price_increase
+      - run:
+          name: bundle installのための準備
+          command: sudo apt-get update && sudo apt-get install -y libmagickcore-dev
+      - ruby/install-deps
+
   test:
     docker:
       - image: cimg/ruby:3.0.2
@@ -28,6 +40,9 @@ jobs:
 
 workflows:
   version: 2
-  workflows:
+  build_and_test:
     jobs:
+      - build
       - test:
+          requires:
+            - build
