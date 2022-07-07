@@ -28,15 +28,14 @@ jobs:
       - image: cimg/ruby:3.0.2-browsers
         environment:
           RAILS_ENV: test
+          DB_USERNAME: root
           DB_PASSWORD: ''
-          DB_HOST: 'db'
+          DB_HOST: 127.0.0.1
       - image: cimg/mysql:8.0.28
         environment:
           MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
           MYSQL_ROOT_PASSWORD: ''
           MYSQL_DATABASE: Price_increase_test
-          MYSQL_USER: root
-        name: db
     steps:
       - checkout:
           path:  ~/Price_increase
