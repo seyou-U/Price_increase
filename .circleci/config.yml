@@ -43,11 +43,15 @@ jobs:
           command: sudo apt-get update && sudo apt-get install -y libmagickcore-dev
       - ruby/install-deps
       - run:
-          name: Rubocop
+          name: Rubocopを実行
           command: bundle exec rubocop
       - run:
           name: Database setup
           command: bundle exec rake db:schema:load
+      - run: yarn install
+      - run:
+          name: Rspecを実行
+          command: bundle exec rspec
 
 workflows:
   version: 2
