@@ -28,7 +28,6 @@ jobs:
       - image: cimg/ruby:3.0.2-browsers
         environment:
           RAILS_ENV: test
-          DB_USERNAME: root
           DB_PASSWORD: ''
           DB_HOST: 127.0.0.1
       - image: cimg/mysql:8.0.28
