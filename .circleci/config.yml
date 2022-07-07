@@ -50,6 +50,9 @@ jobs:
           command: bundle exec rake db:schema:load
       - run: yarn install
       - run:
+          name: Rspecを実行するための準備
+          command: brew cask install chromedriver
+      - run:
           name: Rspecを実行
           command: bundle exec rspec
 
