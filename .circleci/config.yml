@@ -51,7 +51,7 @@ jobs:
       - run: yarn install
       - run:
           name: Rspecを実行するための準備
-          command: brew cask install chromedriver
+          command: sudo apt-get install chromium-chromedriver
       - run:
           name: Rspecを実行
           command: bundle exec rspec
