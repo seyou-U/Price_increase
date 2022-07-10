@@ -7,11 +7,7 @@ class PredictProductsController < ApplicationController
   def create
     @predict_product = PredictProduct.new(predict_product_params)
     @predict_product.user_id = current_user.id
-    if @predict_product.save
-      redirect_to predict_product_path(@predict_product)
-    else
-      render "new"
-    end
+    @predict_product.save ? (redirect_to predict_product_path(@predict_product)) : (render "new")
   end
 
   def index
