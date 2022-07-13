@@ -1,15 +1,68 @@
 version: 2.1
+
 orbs:
   ruby: circleci/ruby@1.1.2
+
 jobs:
   build:
+    working_directory: ~/Price_increase
     docker:
-      - image: circleci/ruby:3.0.2
+      - image: cimg/ruby:3.0.2-browsers
+        environment:
+          RAILS_ENV: test
+      - image: cimg/mysql:8.0.28
+        environment:
+          MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
+          MYSQL_ROOT_HOST: '%'
     steps:
-      - checkout
+      - checkout:
+          path: ~/Price_increase
+      - run:
+          name: bundle installのための準備
+          command: sudo apt-get update && sudo apt-get install -y libmagickcore-dev
+      - ruby/install-deps
+
+  test:
+    working_directory: ~/Price_increase
+    docker:
+      - image: cimg/ruby:3.0.2-browsers
+        environment:
+          RAILS_ENV: test
+          DB_PASSWORD: ''
+          DB_HOST: 127.0.0.1
+      - image: cimg/mysql:8.0.28
+        environment:
+          MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
+          MYSQL_ROOT_PASSWORD: ''
+          MYSQL_DATABASE: Price_increase_test
+    steps:
+      - checkout:
+          path:  ~/Price_increase
+      - run:
+          name: bundle installのための準備
+          command: sudo apt-get update && sudo apt-get install -y libmagickcore-dev
+      - ruby/install-deps
+      - run:
+          name: Rubocopを実行
+          command: bundle exec rubocop
+      - run:
+          name: Database setup
+          command: bundle exec rake db:schema:load
+      - run: yarn install
+      - run:
+          name: Rspecを実行するための準備
+          command: |
+            wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+            sudo apt install ./google-chrome-stable_current_amd64.deb
+      - run:
+          name: Rspecを実行
+          command: bundle exec rspec
 
 workflows:
   version: 2
-  build:
+  build_and_test:
     jobs:
       - build
+      - test:
+          requires:
+            - build
