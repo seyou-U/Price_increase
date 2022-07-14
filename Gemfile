@@ -42,7 +42,6 @@ group :development, :test do
   gem 'rubocop-airbnb'
   gem 'rspec-rails'
   gem 'factory_bot_rails'
-  gem 'rack-mini-profiler', '~> 2.0'
   gem 'faker'
   gem 'mini_racer'
 end
