@@ -30,7 +30,9 @@
 
 /public/packs
 /public/packs-test
-/public/uploads
+/public/uploads/predict_product
+/public/uploads/tmp
+/public/uploads/user
 /node_modules
 /yarn-error.log
 yarn-debug.log*
