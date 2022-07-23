@@ -11,6 +11,8 @@
             <div class="search-image">
               <% if product.image.present? %>
                 <%= image_tag product.image.url, class: "search-product-image" %>
+              <% else %>
+                <%= image_tag "no_image.jpeg", class: "search-product-image" %>
               <% end %>
             </div>
             <div class="product-detailed">
