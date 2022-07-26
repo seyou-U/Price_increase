@@ -21,7 +21,7 @@ products_date.each do |product|
     explanation: product[2],
     quote: product[4],
     genre_id: product[5],
-    image: File.open("#{Rails.root}/#{product[3]}"))
+    image: File.open("app/assets/images/#{product[3]}"))
 end
 
 User.create!(username: 'Test', email: 'example@example.com', password: 'foobar')

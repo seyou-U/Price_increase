@@ -42,7 +42,6 @@ group :development, :test do
   gem 'rubocop-airbnb'
   gem 'rspec-rails'
   gem 'factory_bot_rails'
-  gem 'rack-mini-profiler', '~> 2.0'
   gem 'faker'
   gem 'mini_racer'
 end
@@ -68,3 +67,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'aws-sdk-s3', require: false
+gem 'fog-aws'
+gem 'dotenv-rails'
